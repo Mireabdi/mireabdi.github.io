@@ -1,206 +1,212 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdirahman Mire – IT Support</title>
-    <meta name="description" content="Abdirahman Mire — IT-tuki-opiskelija. Helpdesk, service desk ja IT-support portfolio.">
-    <meta name="theme-color" content="#0d1117">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230d1117'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='%2358a6ff' text-anchor='middle'%3EAM%3C/text%3E%3C/svg%3E">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem("mireSite.theme");
+    var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+    document.write('<meta name="theme-color" content="' + (theme === "dark" ? "#15181d" : "#f1f2f4") + '">');
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abdirahman Mire</title>
+<meta name="description" content="Abdirahman Mire — IT student in Helsinki, looking for a first role in helpdesk or service desk work.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Abdirahman Mire — IT Support">
+<meta property="og:description" content="IT student in Helsinki looking for a first role in helpdesk or service desk work.">
+<meta property="og:url" content="https://mireabdi.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314171c'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='700' fill='%232f6f6b' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <a href="#" class="logo">Abdirahman Mire<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="#tietoja">Tietoja</a></li>
-                <li><a href="#osaaminen">Osaaminen</a></li>
-                <li><a href="#projektit">Projektit</a></li>
-                <li><a href="#kokemus">Kokemus</a></li>
-                <li><a href="#yhteystiedot">Yhteystiedot</a></li>
-            </ul>
-        </nav>
-    </header>
+<header class="site-header">
+  <nav class="wrap">
+    <span class="logo">mire<span class="logo-at">@</span>it-support</span>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about">about</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+    </div>
+  </nav>
+</header>
 
-    <section class="hero">
-        <div class="wrap">
-            <div class="hero-eyebrow">IT Support · Service Desk · Helpdesk</div>
-            <h1>Abdirahman Mire</h1>
-            <p class="hero-tagline">Tietojenkäsittelyn tradenomiopiskelija, joka ratkoo Windows-, Active Directory- ja verkko-ongelmia käytännössä — kaikki todennettuna portfoliossa.</p>
-            <div class="hero-ctas">
-                <a href="#projektit" class="btn btn-primary">Katso portfolio →</a>
-                <a href="#yhteystiedot" class="btn btn-secondary">Ota yhteyttä</a>
-            </div>
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <h1>Abdirahman Mire</h1>
+      <p class="hero-statement">IT student in Helsinki working toward my first support role. I set up Windows Server labs, break things on purpose, and write down what I learn.</p>
+
+      <dl class="info-panel">
+        <div class="info-row">
+          <dt>Role</dt>
+          <dd>IT Support / Service Desk</dd>
         </div>
-    </section>
-
-    <section id="tietoja">
-        <div class="wrap">
-            <div class="section-label">01 — Tietoja</div>
-            <h2 class="section-title">Kuka olen</h2>
-            <div class="about-grid">
-                <div class="about-text reveal">
-                    <p>Kiinnostus teknologiaan ei ole tullut koulusta. Lapsuudesta asti olen auttanut perhettä ja tuttavia tietokoneongelmissa, asentanut Windowsia ja selvittänyt laitevikoja. Se on aina tuntunut omalta jutulta.</p>
-                    <p>Haaga-Heliassa olen opiskellut tietoverkot, käyttöjärjestelmät ja tietoturvan. Opintojen ohella olen rakentanut käytännön portfolion GitHubiin, kaikki todennettuna kuvakaappauksin ja ratkaistuina vikatapauksina.</p>
-                    <p>Viisi vuotta asiakaspalvelua on opettanut sen mitä IT-tuki vaatii: kuuntele ensin, ratkaise sen jälkeen. <strong>Turhautunut käyttäjä ei tarvitse teknistä luentoa. Hän tarvitsee ratkaisun.</strong></p>
-                </div>
-                <div class="stats reveal">
-                    <div class="stat"><div class="stat-value">5 v</div><div class="stat-label">Asiakaspalvelu-<br>kokemus</div></div>
-                    <div class="stat"><div class="stat-value">4+</div><div class="stat-label">Portfolio-<br>projektia</div></div>
-                    <div class="stat"><div class="stat-value">2026</div><div class="stat-label">Valmistuminen<br>arvioitu</div></div>
-                    <div class="stat"><div class="stat-value">HKI</div><div class="stat-label">Sijainti<br>Helsinki</div></div>
-                </div>
-            </div>
+        <div class="info-row">
+          <dt>Focus</dt>
+          <dd>Windows infrastructure, Active Directory, networking basics</dd>
         </div>
-    </section>
-
-    <section id="osaaminen">
-        <div class="wrap">
-            <div class="section-label">02 — Osaaminen</div>
-            <h2 class="section-title">Tekninen osaaminen</h2>
-            <div class="skills-grid reveal">
-                <div class="skill-card">
-                    <h3>Windows &amp; palvelimet</h3>
-                    <div class="pills"><span class="pill">Windows 11</span><span class="pill">Server 2022</span><span class="pill">Server Core</span><span class="pill">VMware</span></div>
-                </div>
-                <div class="skill-card">
-                    <h3>Active Directory</h3>
-                    <div class="pills"><span class="pill">AD DS</span><span class="pill">GPO</span><span class="pill">OU-rakenne</span><span class="pill">Ryhmähallinta</span><span class="pill">Account Lockout</span></div>
-                </div>
-                <div class="skill-card">
-                    <h3>Verkkopalvelut</h3>
-                    <div class="pills"><span class="pill">DNS</span><span class="pill">DHCP</span><span class="pill">NTFS</span><span class="pill">SMB</span><span class="pill">TCP/IP</span></div>
-                </div>
-                <div class="skill-card">
-                    <h3>Microsoft 365</h3>
-                    <div class="pills"><span class="pill">M365 Admin</span><span class="pill">Entra ID</span><span class="pill">Exchange Online</span><span class="pill">Intune</span></div>
-                </div>
-                <div class="skill-card">
-                    <h3>Skriptaus &amp; työkalut</h3>
-                    <div class="pills"><span class="pill">PowerShell</span><span class="pill">Linux</span><span class="pill">Wireshark</span><span class="pill">Nmap</span><span class="pill">GitHub</span></div>
-                </div>
-                <div class="skill-card">
-                    <h3>Tietoturva</h3>
-                    <div class="pills"><span class="pill">OWASP Top 10</span><span class="pill">Metasploit</span><span class="pill">Kali Linux</span><span class="pill">Hashcat</span></div>
-                </div>
-            </div>
+        <div class="info-row">
+          <dt>Location</dt>
+          <dd>Helsinki, Finland</dd>
         </div>
-    </section>
-
-    <section id="projektit">
-        <div class="wrap">
-            <div class="section-label">03 — Projektit</div>
-            <h2 class="section-title">Portfolio</h2>
-            <div class="projects-grid reveal">
-                <a href="https://github.com/Mireabdi/Helpdesk-Portfolio/blob/main/01-Workstation-setup/README.md" target="_blank" rel="noopener" class="project-card">
-                    <div class="project-num">01 — HELPDESK</div>
-                    <div class="project-title">Työaseman asennus</div>
-                    <div class="project-desc">Windows 11 Pro asennus, kovennus, käyttäjähallinta ja DNS-vianmäärityscase.</div>
-                    <div class="project-tags"><span class="ptag">Win11</span><span class="ptag">VMware</span><span class="ptag">DNS</span></div>
-                </a>
-                <a href="https://github.com/Mireabdi/Helpdesk-Portfolio/blob/main/02-Active-directory/README.md" target="_blank" rel="noopener" class="project-card">
-                    <div class="project-num">02 — INFRA</div>
-                    <div class="project-title">Active Directory</div>
-                    <div class="project-desc">DC käyttöönotto, OU-rakenne, käyttäjät, ryhmät, GPO ja account lockout -case.</div>
-                    <div class="project-tags"><span class="ptag">AD DS</span><span class="ptag">GPO</span><span class="ptag">PS</span></div>
-                </a>
-                <a href="https://github.com/Mireabdi/Helpdesk-Portfolio/blob/main/03-Network-troubleshooting/README.md" target="_blank" rel="noopener" class="project-card">
-                    <div class="project-num">03 — VERKKO</div>
-                    <div class="project-title">DNS &amp; DHCP</div>
-                    <div class="project-desc">Verkkopalveluiden käyttöönotto ja vianmääritys domain-ympäristössä.</div>
-                    <div class="project-tags"><span class="ptag">DNS</span><span class="ptag">DHCP</span><span class="ptag">AD</span></div>
-                </a>
-                <a href="https://github.com/Mireabdi/Helpdesk-Portfolio/blob/main/04-FileServices/README.md" target="_blank" rel="noopener" class="project-card">
-                    <div class="project-num">04 — TIEDOSTOT</div>
-                    <div class="project-title">File Services</div>
-                    <div class="project-desc">SMB-jako, NTFS- ja Share-oikeudet ryhmäpohjaisesti, access denied -case.</div>
-                    <div class="project-tags"><span class="ptag">NTFS</span><span class="ptag">SMB</span><span class="ptag">AD</span></div>
-                </a>
-            </div>
-            <div class="projects-cta">
-                <a href="https://github.com/Mireabdi/Helpdesk-Portfolio" target="_blank" rel="noopener" class="btn btn-secondary">Koko portfolio GitHubissa →</a>
-            </div>
+        <div class="info-row">
+          <dt>Status</dt>
+          <dd class="status-value"><span class="status-dot" aria-hidden="true"></span>Open to work</dd>
         </div>
-    </section>
+      </dl>
 
-    <section id="kokemus">
-        <div class="wrap">
-            <div class="section-label">04 — Kokemus</div>
-            <h2 class="section-title">Koulutus &amp; työkokemus</h2>
-            <div class="timeline reveal">
-                <div class="tl-item">
-                    <div class="tl-period">2023 — 2026</div>
-                    <div class="tl-role">Tradenomi, Tietojenkäsittely</div>
-                    <div class="tl-org">Haaga-Helia ammattikorkeakoulu</div>
-                    <div class="tl-body">Verkot, käyttöjärjestelmät, tietoturva, tunkeutumistestaus, sovellusten hakkerointi, palvelinten hallinta ja pilvipalvelut.</div>
-                </div>
-                <div class="tl-item">
-                    <div class="tl-period">2021 — 2022</div>
-                    <div class="tl-role">Puhelinhaastattelija</div>
-                    <div class="tl-org">Kantar</div>
-                    <div class="tl-body">Strukturoitujen puhelinhaastattelujen toteutus ja tiedon tallennus. Tarkka dokumentointi tutkimusympäristössä.</div>
-                </div>
-                <div class="tl-item">
-                    <div class="tl-period">2018 — 2021</div>
-                    <div class="tl-role">Kaupanalan työntekijä</div>
-                    <div class="tl-org">Barona — Prisma, S-Market</div>
-                    <div class="tl-body">Asiakaspalvelu, kassa, myynti, hyllytys ja keräily. Asiakasongelmien ratkaisu kiireympäristössä.</div>
-                </div>
-                <div class="tl-item">
-                    <div class="tl-period">2015 — 2018</div>
-                    <div class="tl-role">Liiketalouden perustutkinto</div>
-                    <div class="tl-org">Suomen Liikemiesten Kauppaopisto</div>
-                    <div class="tl-body">Liiketalouden perusteet ja asiakaspalvelu.</div>
-                </div>
-            </div>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View lab work</a>
+        <a href="#contact" class="btn btn-secondary">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="wrap">
+      <h2 class="section-label">about</h2>
+      <div class="prose">
+        <p>My interest in technology didn't start in school. I've been helping family and friends with computer problems since I was a kid, installing Windows and chasing down hardware faults. It's always just felt like my thing.</p>
+        <p>At Haaga-Helia I've studied networks, operating systems, and security. Alongside my studies I've built a hands-on portfolio on GitHub, all of it backed up with screenshots and real troubleshooting cases.</p>
+        <p>Five years in customer service taught me what IT support takes: listen first, solve second. A frustrated user doesn't need a technical lecture. They need a fix.</p>
+        <p>Right now I'm looking for a first role in helpdesk or service desk work. Longer term, I want this to grow into a long career in IT, not just a first job.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="wrap">
+      <h2 class="section-label">projects</h2>
+      <p class="section-note">Built in VMware on Windows Server 2022. Each one is documented with screenshots and a troubleshooting case.</p>
+
+      <div class="row-list">
+        <a class="row-link" href="https://github.com/Mireabdi/Helpdesk-Portfolio/blob/main/01-Workstation-setup/README.md" target="_blank" rel="noopener">
+          <span class="row-main">
+            <span class="row-title">Workstation Setup</span>
+            <span class="row-desc">Windows 11 Pro install, hardening, user accounts, and a DNS troubleshooting case.</span>
+          </span>
+          <span class="row-tags"><span>Windows 11</span><span>VMware</span><span>DNS</span></span>
+        </a>
+        <a class="row-link" href="https://github.com/Mireabdi/Helpdesk-Portfolio/blob/main/02-Active-directory/README.md" target="_blank" rel="noopener">
+          <span class="row-main">
+            <span class="row-title">Active Directory</span>
+            <span class="row-desc">Domain controller setup, OU structure, users, groups, GPOs, and an account lockout case.</span>
+          </span>
+          <span class="row-tags"><span>AD DS</span><span>GPO</span><span>PowerShell</span></span>
+        </a>
+        <a class="row-link" href="https://github.com/Mireabdi/Helpdesk-Portfolio/blob/main/03-Network-troubleshooting/README.md" target="_blank" rel="noopener">
+          <span class="row-main">
+            <span class="row-title">DNS &amp; DHCP</span>
+            <span class="row-desc">Core network services set up and troubleshot inside a domain environment.</span>
+          </span>
+          <span class="row-tags"><span>DNS</span><span>DHCP</span><span>AD</span></span>
+        </a>
+        <a class="row-link" href="https://github.com/Mireabdi/Helpdesk-Portfolio/blob/main/04-FileServices/README.md" target="_blank" rel="noopener">
+          <span class="row-main">
+            <span class="row-title">File Services</span>
+            <span class="row-desc">SMB shares with NTFS and share permissions by group, plus an access-denied case.</span>
+          </span>
+          <span class="row-tags"><span>NTFS</span><span>SMB</span><span>AD</span></span>
+        </a>
+        <a class="row-link contact-row" href="https://github.com/Mireabdi/Helpdesk-Portfolio" target="_blank" rel="noopener">
+          <span class="row-key">Full repo</span>
+          <span class="row-val">github.com/Mireabdi/Helpdesk-Portfolio</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="wrap">
+      <h2 class="section-label">skills</h2>
+      <dl class="spec-list">
+        <div class="spec-row">
+          <dt>Platforms</dt>
+          <dd>Windows Server 2022, Windows 11, VMware</dd>
         </div>
-    </section>
-
-    <section id="yhteystiedot" style="border-bottom: none;">
-        <div class="wrap">
-            <div class="section-label">05 — Yhteystiedot</div>
-            <h2 class="section-title">Ota yhteyttä</h2>
-            <div class="contact-grid">
-                <div class="reveal">
-                    <p class="contact-intro">Etsin ensimmäistä IT-alan työpaikkaa. Valmis aloittamaan heti. Lähituki, service desk tai helpdesk.</p>
-                    <div class="contact-links">
-                        <a href="mailto:mire.abdirahman97@gmail.com" class="contact-link"><span class="contact-icon">✉️</span>mire.abdirahman97@gmail.com</a>
-                        <a href="tel:+358449800327" class="contact-link"><span class="contact-icon">📱</span>+358 44 980 0327</a>
-                        <a href="https://www.linkedin.com/in/abdimire/" target="_blank" rel="noopener" class="contact-link"><span class="contact-icon">💼</span>linkedin.com/in/abdimire</a>
-                        <a href="https://github.com/Mireabdi" target="_blank" rel="noopener" class="contact-link"><span class="contact-icon">💻</span>github.com/Mireabdi</a>
-                    </div>
-                </div>
-                <div class="avail-box reveal">
-                    <div class="avail-header"><span class="avail-dot"></span>Avoin työtarjouksille</div>
-                    <div class="avail-row"><span class="avail-key">Sijainti</span><span class="avail-val">Helsinki, Uusimaa</span></div>
-                    <div class="avail-row"><span class="avail-key">Rooli</span><span class="avail-val">IT Support, Service Desk, Helpdesk</span></div>
-                    <div class="avail-row"><span class="avail-key">Työsuhde</span><span class="avail-val">Vakituinen, määräaikainen, trainee</span></div>
-                    <div class="avail-row"><span class="avail-key">Aloitus</span><span class="avail-val">Heti</span></div>
-                </div>
-            </div>
+        <div class="spec-row">
+          <dt>Directory &amp; Identity</dt>
+          <dd>Active Directory, Entra ID, Microsoft 365 admin</dd>
         </div>
-    </section>
+        <div class="spec-row">
+          <dt>Networking</dt>
+          <dd>DNS, DHCP, TCP/IP fundamentals, SMB &amp; NTFS</dd>
+        </div>
+        <div class="spec-row">
+          <dt>Service Management</dt>
+          <dd>ServiceNow fundamentals, ITIL v4</dd>
+        </div>
+        <div class="spec-row">
+          <dt>Tools</dt>
+          <dd>PowerShell, Wireshark, Nmap, Git &amp; GitHub</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
 
-    <footer>
-        © 2025 Abdirahman Mire
-    </footer>
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="wrap">
+      <h2 class="section-label">contact</h2>
+      <p class="section-note">Looking to start as soon as possible. Reach out any of these ways.</p>
 
-    <script>
-        const obs = new IntersectionObserver(entries => {
-            entries.forEach((e, i) => {
-                if (e.isIntersecting) {
-                    setTimeout(() => e.target.classList.add('on'), i * 80);
-                    obs.unobserve(e.target);
-                }
-            });
-        }, { threshold: 0.1 });
+      <div class="row-list">
+        <a class="row-link contact-row" href="mailto:mire.abdirahman97@gmail.com">
+          <span class="row-key">Email</span>
+          <span class="row-val">mire.abdirahman97@gmail.com</span>
+        </a>
+        <a class="row-link contact-row" href="https://www.linkedin.com/in/abdimire/" target="_blank" rel="noopener">
+          <span class="row-key">LinkedIn</span>
+          <span class="row-val">linkedin.com/in/abdimire</span>
+        </a>
+        <a class="row-link contact-row" href="https://github.com/Mireabdi" target="_blank" rel="noopener">
+          <span class="row-key">GitHub</span>
+          <span class="row-val">github.com/Mireabdi</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-    </script>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span id="copyright-year">© 2025 Abdirahman Mire</span>
+    <a href="https://github.com/Mireabdi/mireabdi.github.io" target="_blank" rel="noopener">Source on GitHub</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("copyright-year").textContent = "© " + new Date().getFullYear() + " Abdirahman Mire";
+
+  document.getElementById("theme-toggle").addEventListener("click", function () {
+    var current = document.documentElement.getAttribute("data-theme") || "light";
+    var next = current === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("mireSite.theme", next);
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", next === "dark" ? "#15181d" : "#f1f2f4");
+  });
+</script>
 </body>
 </html>
