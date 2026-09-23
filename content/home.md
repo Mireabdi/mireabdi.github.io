@@ -1,20 +1,12 @@
 # HOME (index.html) — Copy
 
-Source note: hero content mostly carries over from the current site (index.html on
-main). What's new here is the "why hire me" proof strip. Info-panel labels are
-metadata-style (short label/value pairs) — fits mono/UI-chrome styling per
-design-lead's constraint. Everything else on this page is prose-length and should
-NOT be set in mono.
+**Final version (2026-09-24):** the owner supplied a complete rewrite of the
+hero statement, info panel, and proof strip, replacing all prior drafts
+below. This is now the source of truth for index.html. Proof strip is now
+4 items (added "Ongelmanratkaisu"); the info panel's fourth label changed
+from "Tila" to "Tilanne".
 
 ---
-
-**Translated to Finnish 2026-09-24** (owner request: site is Finnish-only for
-now, no language toggle). Item 3 of the original 4-item proof strip ("ITIL v4
-fundamentals") was already dropped from the live page in an earlier pass
-(ITIL v4/ServiceNow deferred until the course is completed) but this file
-still had it — removed here too so this file matches index.html. English
-process notes below are left as-is for the team; only the actual page copy is
-Finnish.
 
 ## Hero
 
@@ -22,23 +14,21 @@ Finnish.
 Abdi Mire
 
 **One-line positioning statement (Finnish page copy):**
-IT-alan opiskelija Helsingissä, tähtäimessä ensimmäinen työpaikka
-tukitehtävissä. Rakennan Windows Server -labroja, rikon asioita
-tarkoituksella ja kirjaan ylös, mitä opin.
-
-*(Carried over from current site almost verbatim — it already does the job:
-plain, specific, no buzzwords.)*
+IT-alan opiskelija Helsingissä, etsimässä ensimmäistä työpaikkaani IT-tuen
+parissa. Rakennan Windows Server -labroja, rikon asioita tarkoituksella ja
+selvitän, miten ne korjataan. Dokumentoin projektini käytännön tekemisen
+kautta.
 
 **Info panel (Role / Focus / Location / Status — Finnish page copy):**
 
 | Label | Value |
 |---|---|
 | Rooli | IT-tuki / Service Desk |
-| Painopiste | Windows-infrastruktuuri, Active Directory, verkkoperusteet |
+| Painopiste | Windows Server · Active Directory · Verkkotekniikka |
 | Sijainti | Helsinki, Suomi |
-| Tila | Avoinna työmahdollisuuksille |
+| Tilanne | Avoinna työmahdollisuuksille |
 
-**Hero actions (button labels, Finnish page copy):**
+**Hero actions (button labels, unchanged, Finnish page copy):**
 - Primary: "Katso projektit" → links to Projects page
 - Secondary: "Ota yhteyttä" → links to Resume/Contact page
 
@@ -46,23 +36,13 @@ plain, specific, no buzzwords.)*
 
 ## Proof strip
 
-Purpose: a skimming recruiter reads this in under 10 seconds and comes away with
-"this person has done real, verifiable work and is ready to start." Each item
-should read like a short fact, not a slogan. Laid out as flat info-panel rows
-(no stat-tiles/cards), per design-lead's spec.
+Heading: "mitä tuon mukanani" (section-label kicker above the strip).
 
-1. **Käytännön projektit**: 4 dokumentoitua infrastruktuuriprojektia: Windows
-   Server, Active Directory, verkkotekniikka ja tiedostopalvelut. Jokainen
-   rakennettu alusta asti ja dokumentoitu kuvakaappauksin sekä aidolla
-   vianselvitystapauksella.
-2. **Tausta**: Viisi vuotta asiakaspalvelua on opettanut pysymään
-   rauhallisena, kuuntelemaan ensin ja korjaamaan varsinaisen ongelman — ei
-   vain oiretta, jonka joku kuvailee.
-3. **Saatavuus**: Asuu Helsingissä ja on valmis aloittamaan heti.
-
----
-
-**Humanizer pass on Finnish text (2026-09-24):** fixed a case error
-("tukitehtävistä" → "tukitehtävissä") and a dropped-verb fragment in the
-proof strip's second item; split the third item into short sentences to
-avoid mixing a verb clause with bare adjective fragments in one line.
+1. **Käytännön projektit**: 4 dokumentoitua infrastruktuuriprojektia, joissa
+   olen rakentanut ympäristöjä alusta asti ja harjoitellut oikean
+   kaltaisten vikatilanteiden selvittämistä.
+2. **Asiakaspalvelutausta**: 5 vuotta asiakaspalvelua. Kuuntelen ensin,
+   selvitän ongelman ja pidän viestinnän selkeänä.
+3. **Ongelmanratkaisu**: En arvaa – tarkistan, selvitän syyn, korjaan ja
+   varmistan, että kaikki toimii.
+4. **Saatavuus**: Helsinki · valmis aloittamaan nopeasti.
