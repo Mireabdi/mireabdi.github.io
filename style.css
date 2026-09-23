@@ -235,7 +235,13 @@ code {
 .hero-actions { display: flex; gap: 0.85rem; flex-wrap: wrap; }
 
 /* Proof strip (Home) reuses .info-panel/.info-row exactly as-is; the
-   kicker above it reuses .section-label -- no new visual style. */
+   kicker above it reuses .section-label -- no new visual style. Its own
+   status dot stays static: the hero's "Status" row directly above it is
+   already the site's one pulsing indicator, and per style-guide.md §4.2
+   the pulse motif is reserved for a single instance, not repeated. */
+.proof-strip .status-dot {
+  animation: none;
+}
 
 /* ===== Inner-page intro (About / Projects / Resume) ===== */
 .page-intro {
@@ -377,6 +383,14 @@ code {
   align-items: center;
   gap: 0.4rem;
   color: var(--status-ok);
+}
+
+/* Per style-guide.md §4.2: the ticket-metadata status dot is reused
+   statically here, never pulsing -- the pulse animation is reserved for
+   the single "open to work" hero indicator. Four-plus simultaneously
+   pulsing dots down the project list would read as busy/decorative. */
+.case-status .status-dot {
+  animation: none;
 }
 
 .case-title {

@@ -52,7 +52,7 @@
     <div class="wrap">
       <p class="section-label">mire@it-support:~/projects$</p>
       <h1 class="page-heading">Projects</h1>
-      <p class="section-note">Built in VMware on Windows Server 2022. Each lab below is documented with screenshots and a real troubleshooting case — not just a checklist of steps completed.</p>
+      <p class="section-note">Built in VMware on Windows Server 2022. Each lab below is documented with screenshots and a troubleshooting case — a fault deliberately introduced into a working setup, then diagnosed and fixed the way it would be on a real ticket — not just a checklist of steps completed.</p>
     </div>
   </div>
 
@@ -70,11 +70,11 @@
           <li>Basic hardening: real-time antivirus protection and the firewall confirmed active on all network profiles. (BitLocker drive encryption wasn't available in this virtual environment due to a missing TPM chip — a limitation of the lab setup, noted rather than hidden.)</li>
           <li>Two standard user accounts created, added to a local "Helpdesk-Local" group, and checked to confirm neither had admin rights — a basic but important security habit: don't hand out more access than a role needs.</li>
           <li>A shared folder (<code>PublicDocs</code>) set up with separate share and NTFS permissions — Everyone could read it, the Helpdesk-Local group could edit files in it, and it was tested by actually logging in as a standard user and saving a file.</li>
-          <li>Basic network printing configured and tested with a sample print job saved to PDF.</li>
+          <li>Printing capability confirmed by running a test print from Notepad and saving the output as a PDF via the built-in Microsoft Print to PDF option.</li>
         </ul>
 
         <h3 class="section-label">the case — DNS misconfiguration</h3>
-        <p>The workstation could reach the internet by IP address (a ping to 8.8.8.8 worked fine) but couldn't open any websites or reach anything by name. That split — IP works, names don't — points straight at DNS, the service that translates a name like "google.com" into an address a computer can actually use. Checking the network adapter's settings showed the DNS server had been manually set to an address that didn't exist. Resetting it to pull DNS settings automatically (via DHCP) and clearing the DNS cache fixed it immediately — confirmed with a successful ping and a successful <code>nslookup</code>.</p>
+        <p>The workstation could reach the internet by IP address (a ping to 8.8.8.8 worked fine) but couldn't open any websites or reach anything by name. That split — IP works, names don't — points straight at DNS, the service that translates a name like "google.com" into an address a computer can actually use. Checking the network adapter's settings showed the DNS server had been manually set to an address that wasn't a real DNS server. Resetting it to pull DNS settings automatically (via DHCP) and clearing the DNS cache fixed it immediately — confirmed with a successful ping and a successful <code>nslookup</code>.</p>
 
         <h3 class="section-label">why it matters</h3>
         <p>"The internet is down" is one of the most common tickets a helpdesk gets, and it's very often not actually a connectivity problem — it's DNS. Knowing to test both an IP address and a domain name is what separates a five-minute fix from a wasted afternoon chasing the wrong cause.</p>
@@ -95,14 +95,14 @@
         <h3 class="section-label">what was built</h3>
         <ul class="content-list">
           <li>A domain controller (<code>DC01</code>, Windows Server 2022) set up with a static network configuration and its own DNS service, hosting a new domain (<code>mire.local</code>).</li>
-          <li>An organizational structure (OUs) separating users, groups, workstations, and IT administration — this is what lets an admin later apply a setting to "everyone in Sales" instead of editing forty individual machines.</li>
+          <li>An organizational structure (OUs) separating users, groups, workstations, and IT administration, built with PowerShell on the domain controller (which has no graphical interface) — this structure is what lets an admin later apply a setting to "everyone in Sales" instead of editing forty individual machines.</li>
           <li>Domain user accounts and security groups created and placed into the right structure, so permissions are managed by group membership rather than one-by-one.</li>
           <li>A Windows 11 workstation joined to the domain, pointed at the domain controller for DNS, with a domain-account login tested and confirmed working.</li>
           <li>A Group Policy that blocks standard users from opening Control Panel or PC settings — applied once, centrally, and enforced automatically on every machine in scope.</li>
         </ul>
 
         <h3 class="section-label">the case — account lockout</h3>
-        <p>A user couldn't log in — the error said the account was locked. This happens when Active Directory's lockout policy trips after too many failed login attempts (commonly after a password reset, when the old password is still saved somewhere). The account's locked status was confirmed in Active Directory Users and Computers, unlocked, and the login retested successfully.</p>
+        <p>A user couldn't log in — the error said the account was locked. This happens when Active Directory's lockout policy trips after too many failed login attempts in a row. The account's locked status was confirmed in Active Directory Users and Computers, unlocked, and the login retested successfully.</p>
 
         <h3 class="section-label">why it matters</h3>
         <p>Account lockouts are one of the highest-volume ticket types on any service desk — usually simple to fix, but only if you know exactly where to look and don't guess. This case also shows why centralized account management matters: a lockout policy that applies to every account by default is a security control, not just an inconvenience, and unlocking an account correctly (rather than, say, resetting the password unnecessarily) avoids creating a second problem while fixing the first.</p>
