@@ -52,7 +52,7 @@
     <div class="wrap">
       <p class="section-label">mire@it-support:~/projects$</p>
       <h1 class="page-heading">Projektit</h1>
-      <p class="section-note">Rakennettu VMwaressa Windows Server 2022:lla. Jokainen alla oleva labra on dokumentoitu kuvakaappauksin ja vianselvitystapauksella: tarkoituksella toimivaan ympäristöön tuotu vika, joka sitten diagnosoitiin ja korjattiin kuten oikealla tiketillä, ei vain suoritettuna tarkistuslistana.</p>
+      <p class="section-note">Rakennettu VMwaressa Windows Server 2022:lla. Jokainen alla oleva labra on dokumentoitu kuvakaappauksin ja vianselvitystapauksella: toimivaan ympäristöön tuotiin tarkoituksella vika, joka sitten diagnosoitiin ja korjattiin kuten oikealla tiketillä, ei vain suoritettuna tarkistuslistana.</p>
     </div>
   </div>
 
@@ -62,11 +62,11 @@
       <h2 class="case-title">Työaseman käyttöönotto</h2>
       <div class="prose">
         <h3 class="section-label">ongelma / tilanne</h3>
-        <p>Uuden Windows 11 Pro -työaseman pitää edetä tyhjästä koneesta sellaiseksi, että oikea käyttäjä voi kirjautua siihen turvallisesti: asennettu, päivitetty, lukittu asianmukaisesti, tilit oikein määriteltyinä ja jaettu kansio, jota ihmiset voivat käyttää. Kesken prosessin koneeseen ilmaantui vika, joka on yksi yleisimmistä helpdesk-tiketeistä: "internet ei toimi."</p>
+        <p>Uusi Windows 11 Pro -työasema pitää saada tyhjästä koneesta sellaiseksi, että oikea käyttäjä voi kirjautua siihen turvallisesti: asennettuna, päivitettynä, asianmukaisesti lukittuna, tilit oikein määriteltyinä ja mukana jaettu kansio, jota ihmiset voivat käyttää. Kesken prosessin koneeseen ilmaantui vika, joka on yksi yleisimmistä helpdesk-tiketeistä: "internet ei toimi."</p>
 
         <h3 class="section-label">mitä rakennettiin</h3>
         <ul class="content-list">
-          <li>Windows 11 Pro asennettu puhtaalta pöydältä, kone nimetty uudelleen ja määritetty paikallisella pääkäyttäjätilillä, VMware Tools asennettu, Windows Update ajettu loppuun asti.</li>
+          <li>Windows 11 Pro asennettu puhtaana asennuksena, kone nimetty uudelleen ja määritetty paikallisella pääkäyttäjätilillä, VMware Tools asennettu ja Windows Update ajettu loppuun asti.</li>
           <li>Perussuojaus: reaaliaikainen virustorjunta ja palomuuri varmistettu aktiivisiksi kaikissa verkkoprofiileissa. (BitLocker-asemasalausta ei ollut saatavilla tässä virtuaaliympäristössä puuttuvan TPM-sirun vuoksi, mikä on labraympäristön rajoitus, ei piilotettu asia.)</li>
           <li>Kaksi tavallista käyttäjätiliä luotu, lisätty paikalliseen "Helpdesk-Local"-ryhmään ja tarkistettu, ettei kummallakaan ollut pääkäyttäjäoikeuksia. Perustava mutta tärkeä tietoturvatapa: älä jaa enempää oikeuksia kuin rooli vaatii.</li>
           <li>Jaettu kansio (<code>PublicDocs</code>) määritetty erillisillä jako- ja NTFS-oikeuksilla: kaikki pystyivät lukemaan sitä, Helpdesk-Local-ryhmä pystyi muokkaamaan tiedostoja siinä, ja toiminta testattiin kirjautumalla sisään tavallisena käyttäjänä ja tallentamalla tiedosto.</li>
@@ -74,10 +74,10 @@
         </ul>
 
         <h3 class="section-label">tapaus: DNS-määrityksen virhe</h3>
-        <p>Työasema pääsi internetiin IP-osoitteella (ping osoitteeseen 8.8.8.8 toimi hyvin), mutta ei pystynyt avaamaan sivustoja tai tavoittamaan mitään nimellä. Tämä jako (IP toimii, nimet eivät) osoittaa suoraan DNS:ään, palveluun joka muuttaa nimen kuten "google.com" osoitteeksi, jota tietokone voi käyttää. Verkkosovittimen asetuksista löytyi DNS-palvelin, joka oli asetettu manuaalisesti osoitteeseen, joka ei ollut oikea DNS-palvelin. Asetuksen palauttaminen automaattiseksi (DHCP:n kautta) ja DNS-välimuistin tyhjentäminen korjasi ongelman heti. Varmistettu onnistuneella pingillä ja onnistuneella <code>nslookup</code>-komennolla.</p>
+        <p>Työasema pääsi internetiin IP-osoitteella (ping osoitteeseen 8.8.8.8 toimi hyvin), mutta ei pystynyt avaamaan sivustoja tai tavoittamaan mitään nimellä. Tämä ero (IP toimii, nimet eivät) viittaa suoraan DNS:ään, palveluun joka muuttaa nimen kuten "google.com" osoitteeksi, jota tietokone voi käyttää. Verkkosovittimen asetuksista löytyi manuaalisesti asetettu DNS-palvelimen osoite, joka ei ollut oikea DNS-palvelin. Asetuksen palauttaminen automaattiseksi (DHCP:n kautta) ja DNS-välimuistin tyhjentäminen korjasi ongelman heti. Varmistettu onnistuneella pingillä ja <code>nslookup</code>-komennolla.</p>
 
         <h3 class="section-label">miksi tällä on merkitystä</h3>
-        <p>"Internet ei toimi" on yksi yleisimmistä tiketeistä, joita helpdesk saa, eikä kyse ole usein yhteysongelmasta: kyse on DNS:stä. Se, että osaa testata sekä IP-osoitteen että verkkotunnuksen, erottaa viiden minuutin korjauksen hukatusta iltapäivästä väärän syyn perässä juoksemisessa.</p>
+        <p>"Internet ei toimi" on yksi yleisimmistä tiketeistä, joita helpdesk saa, eikä se useinkaan ole yhteysongelma: kyse on DNS:stä. Se, että osaa testata sekä IP-osoitteen että verkkotunnuksen, erottaa viiden minuutin korjauksen hukatusta iltapäivästä väärän syyn perässä juoksemisessa.</p>
       </div>
       <p class="row-tags"><span>Windows 11</span><span>VMware</span><span>DNS</span></p>
       <a class="case-link" href="https://github.com/Mireabdi/Helpdesk-Portfolio/blob/main/01-Workstation-setup/README.md" target="_blank" rel="noopener">Katso koko labran README →</a>
@@ -90,7 +90,7 @@
       <h2 class="case-title">Active Directory</h2>
       <div class="prose">
         <h3 class="section-label">ongelma / tilanne</h3>
-        <p>Useimmat organisaatiot eivät hallinnoi käyttäjätilejä ja käyttöoikeuksia yksi kone kerrallaan. Ne käyttävät keskitettyä hakemistoa (Active Directory), jotta IT voi luoda tilin kerran ja hallita, mihin sillä pääsee käsiksi kaikkialla. Tämä labra rakentaa kyseisen hakemiston alusta asti: toimialueen ohjauskoneen, jäsennellyn rakenteen tileille, työaseman joka liitetään siihen, ja käytännön joka valvotaan koko verkossa, sekä yhden yleisimmistä tiketeistä joita service desk käsittelee.</p>
+        <p>Useimmat organisaatiot eivät hallinnoi käyttäjätilejä ja käyttöoikeuksia yksi kone kerrallaan. Ne käyttävät keskitettyä hakemistoa (Active Directory), jotta IT voi luoda tilin kerran ja hallita, mihin sillä pääsee käsiksi kaikkialla. Tämä labra rakentaa kyseisen hakemiston alusta asti: toimialueen ohjauskoneen, jäsennellyn rakenteen tileille, siihen liitetyn työaseman ja koko verkossa valvotun käytännön, sekä yhden yleisimmistä tiketeistä joita service desk käsittelee.</p>
 
         <h3 class="section-label">mitä rakennettiin</h3>
         <ul class="content-list">
@@ -105,7 +105,7 @@
         <p>Käyttäjä ei päässyt kirjautumaan sisään. Virheilmoitus kertoi tilin olevan lukittu. Näin käy, kun Active Directoryn lukitussääntö laukeaa liian monen peräkkäisen epäonnistuneen kirjautumisyrityksen jälkeen. Tilin lukittu tila varmistettiin Active Directory Users and Computers -työkalussa, tili avattiin, ja kirjautuminen testattiin uudelleen onnistuneesti.</p>
 
         <h3 class="section-label">miksi tällä on merkitystä</h3>
-        <p>Tilien lukittuminen on yksi yleisimmistä tikettityypeistä millä tahansa service deskillä, yleensä helppo korjata, mutta vain jos tietää tarkalleen mistä katsoa eikä arvaa. Tämä tapaus näyttää myös, miksi keskitetty tilienhallinta on tärkeää: lukitussääntö joka koskee kaikkia tilejä oletuksena on tietoturvakontrolli, ei vain hankaluus, ja tilin avaaminen oikein (eikä esimerkiksi salasanan turhaa nollaamista) välttää toisen ongelman syntymisen ensimmäistä korjattaessa.</p>
+        <p>Tilien lukittuminen on yksi yleisimmistä tikettityypeistä millä tahansa service deskillä, yleensä helppo korjata, mutta vain jos tietää tarkalleen mistä katsoa eikä arvaa. Tämä tapaus näyttää myös, miksi keskitetty tilienhallinta on tärkeää: oletusarvoisesti kaikkia tilejä koskeva lukitussääntö on tietoturvakontrolli, ei vain hankaluus. Tilin avaaminen oikein, ei esimerkiksi tarpeettomalla salasanan nollauksella, estää toisen ongelman syntymisen ensimmäistä korjattaessa.</p>
       </div>
       <p class="row-tags"><span>AD DS</span><span>GPO</span><span>PowerShell</span></p>
       <a class="case-link" href="https://github.com/Mireabdi/Helpdesk-Portfolio/blob/main/02-Active-directory/README.md" target="_blank" rel="noopener">Katso koko labran README →</a>
@@ -118,7 +118,7 @@
       <h2 class="case-title">DNS &amp; DHCP: verkon vianselvitys</h2>
       <div class="prose">
         <h3 class="section-label">ongelma / tilanne</h3>
-        <p>Jokainen verkon laite tarvitsee kaksi asiaa toimiakseen kunnolla: osoitteen (jotta se löytyy) ja tavan muuttaa nimet osoitteiksi (jotta ihmisten ei tarvitse muistaa numeroita). Tämä labra ottaa käyttöön molemmat palvelut toimialueen ohjauskoneella ja varmistaa niiden toimivuuden, minkä jälkeen käydään läpi tarkoituksella rikottu määritys diagnosoinnin harjoittelemiseksi: verkkopalveluversio samasta DNS-ongelmasta kuin tapauksessa 01, mutta palvelin-/toimialuepuolelta yhden virheellisesti määritetyn koneen sijaan.</p>
+        <p>Jokainen verkon laite tarvitsee kaksi asiaa toimiakseen kunnolla: osoitteen (jotta se löytyy) ja tavan muuttaa nimet osoitteiksi (jotta ihmisten ei tarvitse muistaa numeroita). Tämä labra ottaa käyttöön molemmat palvelut toimialueen ohjauskoneella ja varmistaa niiden toimivuuden, minkä jälkeen käydään läpi tarkoituksella rikottu määritys diagnosoinnin harjoittelemiseksi. Kyseessä on verkkopalveluversio samasta DNS-ongelmasta kuin tapauksessa 01, mutta nyt palvelin- ja toimialuepuolelta eikä yhden virheellisesti määritetyn koneen näkökulmasta.</p>
 
         <h3 class="section-label">mitä rakennettiin</h3>
         <ul class="content-list">
@@ -128,10 +128,10 @@
         </ul>
 
         <h3 class="section-label">tapaus: väärä DNS-palvelin toimialueen työasemalla</h3>
-        <p>Työasema ei pystynyt selvittämään mitään sisäisiä toimialueen resursseja. Työasemalle oli määritetty julkinen DNS-palvelin toimialueen ohjauskoneen sijaan, hienovarainen mutta tärkeä ero, koska julkiset DNS-palvelimet eivät tiedä yksityisen toimialueen kuten <code>mire.local</code> olemassaolosta lainkaan. Työaseman osoittaminen takaisin toimialueen ohjauskoneen DNS-palveluun korjasi nimenselvityksen heti, mikä varmistettiin komennoilla <code>ipconfig /all</code> ja <code>nslookup</code>.</p>
+        <p>Työasema ei pystynyt selvittämään mitään sisäisiä toimialueen resursseja. Työasemalle oli määritetty julkinen DNS-palvelin toimialueen ohjauskoneen sijaan, hienovarainen mutta tärkeä ero, koska julkiset DNS-palvelimet eivät edes tiedä, että yksityinen toimialue kuten <code>mire.local</code> on olemassa. Työaseman osoittaminen takaisin toimialueen ohjauskoneen DNS-palveluun korjasi nimenselvityksen heti, mikä varmistettiin komennoilla <code>ipconfig /all</code> ja <code>nslookup</code>.</p>
 
         <h3 class="section-label">miksi tällä on merkitystä</h3>
-        <p>DNS ja DHCP ovat ne kaksi palvelua, jotka saavat verkon "vain toimimaan" ilman että käyttäjät huomaavat niitä, kunnes ne ovat väärin, jolloin kaikki jaetun aseman avaamisesta sisäisen sivuston tavoittamiseen voi hiljaa hajota. Sen tunnistaminen, että kyse on "väärästä DNS-palvelimesta, ei rikkinäisestä verkosta", on ero joka säästää aitoa vianselvitysaikaa, etenkin toimialueympäristössä, jossa julkinen DNS ei yksinkertaisesti pysty vastaamaan sisäisistä nimistä.</p>
+        <p>DNS ja DHCP ovat ne kaksi palvelua, jotka saavat verkon "vain toimimaan" ilman että käyttäjät huomaavat niitä, ennen kuin jokin menee pieleen, jolloin kaikki jaetun aseman avaamisesta sisäisen sivuston tavoittamiseen voi hiljaa hajota. Kun tunnistaa, että kyse on "väärästä DNS-palvelimesta, ei rikkinäisestä verkosta", säästää aitoa vianselvitysaikaa, etenkin toimialueympäristössä, jossa julkinen DNS ei yksinkertaisesti pysty vastaamaan sisäisistä nimistä.</p>
       </div>
       <p class="row-tags"><span>DNS</span><span>DHCP</span><span>AD</span></p>
       <a class="case-link" href="https://github.com/Mireabdi/Helpdesk-Portfolio/blob/main/03-Network-troubleshooting/README.md" target="_blank" rel="noopener">Katso koko labran README →</a>
@@ -149,8 +149,8 @@
         <h3 class="section-label">mitä rakennettiin</h3>
         <ul class="content-list">
           <li>Jaettu kansiorakenne luotu tiedostopalvelimelle ja julkaistu verkkoon SMB:n kautta nimellä <code>Departments</code>.</li>
-          <li>Kaksi Active Directory -ryhmää (<code>HR_RW</code>, <code>IT_RW</code>) luotu nimenomaan käyttöoikeuksien hallintaan. Oikeudet myönnettiin vain ryhmille, ei koskaan yksittäisille henkilöille, mikä tekee pääsystä helpon tarkastaa ja muuttaa myöhemmin (lisätään tai poistetaan joku ryhmästä, sen sijaan että muokattaisiin oikeuksia jokaisessa kansiossa erikseen).</li>
-          <li>Jakotason oikeudet pidettiin yksinkertaisina ja niitä käytettiin vain jaon yleiseen näkyvyyteen; varsinainen käyttöoikeuksien hallinta hoidettiin erikseen NTFS-oikeuksilla kunkin osaston alikansiossa, standardi käytännön malli joka pitää erillään "näetkö tämän olemassaolon" ja "pääsetkö käyttämään sitä".</li>
+          <li>Kaksi Active Directory -ryhmää (<code>HR_RW</code>, <code>IT_RW</code>) luotu nimenomaan käyttöoikeuksien hallintaan. Oikeudet myönnettiin vain ryhmille, ei koskaan yksittäisille henkilöille, mikä tekee pääsyn tarkastamisesta ja muuttamisesta helppoa myöhemmin (lisätään tai poistetaan joku ryhmästä sen sijaan, että oikeuksia muokattaisiin jokaisessa kansiossa erikseen).</li>
+          <li>Jakotason oikeudet pidettiin yksinkertaisina ja niitä käytettiin vain jaon yleiseen näkyvyyteen; varsinainen käyttöoikeuksien hallinta hoidettiin erikseen NTFS-oikeuksilla kunkin osaston alikansiossa, yleinen käytännön malli joka pitää erillään "näetkö tämän olemassaolon" ja "pääsetkö käyttämään sitä".</li>
           <li>Osastojen alikansiot (HR, IT) lukittu niin, että vain vastaava ryhmä pystyi muokkaamaan tiedostoja, ja ylläpitäjillä säilyi täysi hallinta. Määritetty etänä RSAT:lla, koska tiedostopalvelin itse toimii ilman graafista käyttöliittymää (Server Core).</li>
         </ul>
 
@@ -158,7 +158,7 @@
         <p>Toimialueen käyttäjä näki jaetun aseman, mutta sai access denied -virheen avatessaan HR-kansiota. Sen sijaan, että oikeuksia olisi muutettu heti (mikä voi avata pääsyn liian laajasti tai rikkoa jotain muuta), ensin tarkistettiin ryhmäjäsenyys, ja käyttäjä ei yksinkertaisesti ollut vielä <code>HR_RW</code>-ryhmässä, vaikka kansion oikeudet olivat jo oikein. Käyttäjän lisääminen ryhmään ja uudelleenkirjautuminen (jotta käyttöoikeustunnus päivittyi) korjasi asian, ilman että varsinaiseen oikeusrakenteeseen tehtiin yhtäkään muutosta.</p>
 
         <h3 class="section-label">miksi tällä on merkitystä</h3>
-        <p>"Access denied" -tiketit ovat erittäin yleisiä, ja vaisto aloittaa heti oikeuksien muuttaminen on yleensä väärä ensimmäinen liike: se on hitaampaa ja riskialttiimpaa kuin sen tarkistaminen, kuka on missäkin ryhmässä. Tämä tapaus kertoo diagnosointijärjestyksestä: tarkista yksinkertaisin, turvallisin asia ensin, ennen kuin koskee määritykseen josta muutkin ovat riippuvaisia.</p>
+        <p>"Access denied" -tiketit ovat erittäin yleisiä, ja vaistomainen halu muuttaa oikeuksia heti on yleensä väärä ensimmäinen liike: se on hitaampaa ja riskialttiimpaa kuin sen tarkistaminen, kuka on missäkin ryhmässä. Tämä tapaus kertoo diagnosointijärjestyksestä: tarkista yksinkertaisin, turvallisin asia ensin, ennen kuin kosket määritykseen, josta muutkin ovat riippuvaisia.</p>
       </div>
       <p class="row-tags"><span>NTFS</span><span>SMB</span><span>AD</span></p>
       <a class="case-link" href="https://github.com/Mireabdi/Helpdesk-Portfolio/blob/main/04-FileServices/README.md" target="_blank" rel="noopener">Katso koko labran README →</a>

@@ -23,7 +23,7 @@ Abdi Mire
 
 **One-line positioning statement (Finnish page copy):**
 IT-alan opiskelija Helsingissä, tähtäimessä ensimmäinen työpaikka
-tukitehtävistä. Rakennan Windows Server -labroja, rikon asioita
+tukitehtävissä. Rakennan Windows Server -labroja, rikon asioita
 tarkoituksella ja kirjaan ylös, mitä opin.
 
 *(Carried over from current site almost verbatim — it already does the job:
@@ -53,9 +53,17 @@ should read like a short fact, not a slogan. Laid out as flat info-panel rows
 
 1. **Käytännön projektit**: 4 dokumentoitua infrastruktuuriprojektia, Windows
    Server, Active Directory, verkkotekniikka ja tiedostopalvelut, jokainen
-   rakennettu alusta asti kuvakaappauksin ja aidolla vianselvitystapauksella.
-2. **Tausta**: 5 vuotta asiakaspalvelua, opettanut pysymään rauhallisena,
+   rakennettu alusta asti ja dokumentoitu kuvakaappauksin sekä aidolla
+   vianselvitystapauksella.
+2. **Tausta**: 5 vuotta asiakaspalvelua, on opettanut pysymään rauhallisena,
    kuuntelemaan ensin ja korjaamaan varsinaisen ongelman, ei vain oiretta,
    jonka joku kuvailee.
-3. **Saatavuus**: Avoinna työlle heti, asuu Helsingissä, valmis aloittamaan
+3. **Saatavuus**: Avoinna työlle heti. Asuu Helsingissä. Valmis aloittamaan
    välittömästi.
+
+---
+
+**Humanizer pass on Finnish text (2026-09-24):** fixed a case error
+("tukitehtävistä" → "tukitehtävissä") and a dropped-verb fragment in the
+proof strip's second item; split the third item into short sentences to
+avoid mixing a verb clause with bare adjective fragments in one line.

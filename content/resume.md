@@ -45,6 +45,12 @@ here — this page's on-page content is the resume itself.
   kuuntele ensin, ratkaise sitten -periaate, joka siirtyy suoraan
   helpdesk-työhön.
 
+---
+
+**Humanizer pass on Finnish text (2026-09-24):** no changes needed to the
+Kantar/Barona entries themselves (already split cleanly); this note records
+that the pass was applied here too, per the sitewide check.
+
 (Yhteensä viisi vuotta asiakaspalvelukokemusta, mainittu myös About-sivulla
 ja Home-sivun proof stripissä.)
 
