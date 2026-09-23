@@ -22,7 +22,7 @@ that's an easy add — just say what it is.
 My interest in technology didn't start in a classroom. I've been the person
 family and friends call when a computer won't boot, a printer won't connect,
 or Windows needs reinstalling, going back to when I was a kid. There was
-never a single moment I decided to get into IT; it's just always been the
+never a single moment I decided to get into IT. It's just always been the
 thing I was already doing, long before it was a career plan.
 
 ### Paragraph 2 — Haaga-Helia studies (expanded)
