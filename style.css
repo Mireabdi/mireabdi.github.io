@@ -81,6 +81,7 @@ a { color: inherit; }
 .logo {
   font-size: 0.9rem;
   font-weight: 500;
+  text-decoration: none;
 }
 
 .logo-at { color: var(--slate); }
@@ -107,7 +108,8 @@ a { color: inherit; }
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
   color: var(--ink);
   border-color: var(--signal);
 }
