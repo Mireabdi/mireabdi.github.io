@@ -51,15 +51,14 @@ Purpose: a skimming recruiter reads this in under 10 seconds and comes away with
 should read like a short fact, not a slogan. Laid out as flat info-panel rows
 (no stat-tiles/cards), per design-lead's spec.
 
-1. **Käytännön projektit**: 4 dokumentoitua infrastruktuuriprojektia, Windows
-   Server, Active Directory, verkkotekniikka ja tiedostopalvelut, jokainen
+1. **Käytännön projektit**: 4 dokumentoitua infrastruktuuriprojektia: Windows
+   Server, Active Directory, verkkotekniikka ja tiedostopalvelut. Jokainen
    rakennettu alusta asti ja dokumentoitu kuvakaappauksin sekä aidolla
    vianselvitystapauksella.
-2. **Tausta**: 5 vuotta asiakaspalvelua, on opettanut pysymään rauhallisena,
-   kuuntelemaan ensin ja korjaamaan varsinaisen ongelman, ei vain oiretta,
-   jonka joku kuvailee.
-3. **Saatavuus**: Avoinna työlle heti. Asuu Helsingissä. Valmis aloittamaan
-   välittömästi.
+2. **Tausta**: Viisi vuotta asiakaspalvelua on opettanut pysymään
+   rauhallisena, kuuntelemaan ensin ja korjaamaan varsinaisen ongelman — ei
+   vain oiretta, jonka joku kuvailee.
+3. **Saatavuus**: Asuu Helsingissä ja on valmis aloittamaan heti.
 
 ---
 
