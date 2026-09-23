@@ -20,7 +20,7 @@ directly.
 
 **Download CV button:**
 Label: "Download CV" — links to a placeholder file path (owner to supply the
-actual PDF and path; e.g. `/assets/Abdirahman-Mire-CV.pdf`). No PDF is produced
+actual PDF and path; e.g. `/assets/Abdi-Mire-CV.pdf`). No PDF is produced
 here — this page's on-page content is the resume itself.
 
 ---

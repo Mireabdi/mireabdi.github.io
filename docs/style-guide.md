@@ -86,7 +86,7 @@ structured metadata (`.mono`, `.logo`, `.section-label`, `dt` terms, `.row-tags`
 | Tags / micro-meta | `0.72rem`, `var(--slate)`, mono | `.row-tags`, ticket-metadata line (§4.2) — smaller than the general meta range above; matches the existing `.row-tags` value exactly. |
 
 **Inner-page H1 casing:** normal title case (e.g. "Projects", "About", "Resume"), matching the
-Home hero's H1 casing (`Abdirahman Mire`). Lowercase is reserved for the mono "chrome" layer
+Home hero's H1 casing (`Abdi Mire`). Lowercase is reserved for the mono "chrome" layer
 only — `.section-label` kickers, nav links, the logo, tags — never for an actual heading. This
 keeps the existing distinction between "chrome" (lowercase mono) and "content" (normal-case
 sans) intact as new headings are added.

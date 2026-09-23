@@ -11,7 +11,7 @@ NOT be set in mono.
 ## Hero
 
 **Name (H1):**
-Abdirahman Mire
+Abdi Mire
 
 **One-line positioning statement:**
 IT student in Helsinki working toward my first support role. I build Windows
