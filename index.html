@@ -13,7 +13,7 @@
 })();
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abdirahman Mire</title>
+<title>Abdirahman Mire — IT Support</title>
 <meta name="description" content="Abdirahman Mire — IT student in Helsinki, looking for a first role in helpdesk or service desk work.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Abdirahman Mire — IT Support">
@@ -24,18 +24,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script src="assets/main.js" defer></script>
 </head>
 <body>
 
 <header class="site-header">
   <nav class="wrap">
-    <span class="logo">mire<span class="logo-at">@</span>it-support</span>
+    <a class="logo" href="index.html">mire<span class="logo-at">@</span>it-support</a>
     <div class="nav-right">
       <ul class="nav-links">
-        <li><a href="#about">about</a></li>
-        <li><a href="#projects">projects</a></li>
-        <li><a href="#skills">skills</a></li>
-        <li><a href="#contact">contact</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
       </ul>
       <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
         <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
@@ -45,13 +46,12 @@
   </nav>
 </header>
 
-<main>
+<main id="main-content">
 
-  <!-- HERO -->
   <section class="hero">
     <div class="wrap">
       <h1>Abdirahman Mire</h1>
-      <p class="hero-statement">IT student in Helsinki working toward my first support role. I set up Windows Server labs, break things on purpose, and write down what I learn.</p>
+      <p class="hero-statement">IT student in Helsinki working toward my first support role. I build Windows Server labs, break things on purpose, and write down what I learn.</p>
 
       <dl class="info-panel">
         <div class="info-row">
@@ -72,117 +72,29 @@
         </div>
       </dl>
 
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View lab work</a>
-        <a href="#contact" class="btn btn-secondary">Get in touch</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="wrap">
-      <h2 class="section-label">about</h2>
-      <div class="prose">
-        <p>My interest in technology didn't start in school. I've been helping family and friends with computer problems since I was a kid, installing Windows and chasing down hardware faults. It's always just felt like my thing.</p>
-        <p>At Haaga-Helia I've studied networks, operating systems, and security. Alongside my studies I've built a hands-on portfolio on GitHub, all of it backed up with screenshots and real troubleshooting cases.</p>
-        <p>Five years in customer service taught me what IT support takes: listen first, solve second. A frustrated user doesn't need a technical lecture. They need a fix.</p>
-        <p>Right now I'm looking for a first role in helpdesk or service desk work. Longer term, I want this to grow into a long career in IT, not just a first job.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <div class="wrap">
-      <h2 class="section-label">projects</h2>
-      <p class="section-note">Built in VMware on Windows Server 2022. Each one is documented with screenshots and a troubleshooting case.</p>
-
-      <div class="row-list">
-        <a class="row-link" href="https://github.com/Mireabdi/Helpdesk-Portfolio/blob/main/01-Workstation-setup/README.md" target="_blank" rel="noopener">
-          <span class="row-main">
-            <span class="row-title">Workstation Setup</span>
-            <span class="row-desc">Windows 11 Pro install, hardening, user accounts, and a DNS troubleshooting case.</span>
-          </span>
-          <span class="row-tags"><span>Windows 11</span><span>VMware</span><span>DNS</span></span>
-        </a>
-        <a class="row-link" href="https://github.com/Mireabdi/Helpdesk-Portfolio/blob/main/02-Active-directory/README.md" target="_blank" rel="noopener">
-          <span class="row-main">
-            <span class="row-title">Active Directory</span>
-            <span class="row-desc">Domain controller setup, OU structure, users, groups, GPOs, and an account lockout case.</span>
-          </span>
-          <span class="row-tags"><span>AD DS</span><span>GPO</span><span>PowerShell</span></span>
-        </a>
-        <a class="row-link" href="https://github.com/Mireabdi/Helpdesk-Portfolio/blob/main/03-Network-troubleshooting/README.md" target="_blank" rel="noopener">
-          <span class="row-main">
-            <span class="row-title">DNS &amp; DHCP</span>
-            <span class="row-desc">Core network services set up and troubleshot inside a domain environment.</span>
-          </span>
-          <span class="row-tags"><span>DNS</span><span>DHCP</span><span>AD</span></span>
-        </a>
-        <a class="row-link" href="https://github.com/Mireabdi/Helpdesk-Portfolio/blob/main/04-FileServices/README.md" target="_blank" rel="noopener">
-          <span class="row-main">
-            <span class="row-title">File Services</span>
-            <span class="row-desc">SMB shares with NTFS and share permissions by group, plus an access-denied case.</span>
-          </span>
-          <span class="row-tags"><span>NTFS</span><span>SMB</span><span>AD</span></span>
-        </a>
-        <a class="row-link contact-row" href="https://github.com/Mireabdi/Helpdesk-Portfolio" target="_blank" rel="noopener">
-          <span class="row-key">Full repo</span>
-          <span class="row-val">github.com/Mireabdi/Helpdesk-Portfolio</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="section">
-    <div class="wrap">
-      <h2 class="section-label">skills</h2>
-      <dl class="spec-list">
-        <div class="spec-row">
-          <dt>Platforms</dt>
-          <dd>Windows Server 2022, Windows 11, VMware</dd>
+      <h2 class="section-label">why hire me</h2>
+      <dl class="info-panel proof-strip">
+        <div class="info-row">
+          <dt>Hands-on labs</dt>
+          <dd>4 documented infrastructure labs — Windows Server, Active Directory, networking, and file services, each built from scratch with screenshots and a real troubleshooting case.</dd>
         </div>
-        <div class="spec-row">
-          <dt>Directory &amp; Identity</dt>
-          <dd>Active Directory, Entra ID, Microsoft 365 admin</dd>
+        <div class="info-row">
+          <dt>Background</dt>
+          <dd>5 years in customer service — trained to stay calm, listen first, and fix the actual problem, not just the symptom someone describes.</dd>
         </div>
-        <div class="spec-row">
-          <dt>Networking</dt>
-          <dd>DNS, DHCP, TCP/IP fundamentals, SMB &amp; NTFS</dd>
+        <div class="info-row">
+          <dt>Service mgmt</dt>
+          <dd>ITIL v4 fundamentals — service management basics that map directly onto ticket-based support work.</dd>
         </div>
-        <div class="spec-row">
-          <dt>Service Management</dt>
-          <dd>ServiceNow fundamentals, ITIL v4</dd>
-        </div>
-        <div class="spec-row">
-          <dt>Tools</dt>
-          <dd>PowerShell, Wireshark, Nmap, Git &amp; GitHub</dd>
+        <div class="info-row">
+          <dt>Availability</dt>
+          <dd class="status-value"><span class="status-dot" aria-hidden="true"></span>Open to work now, based in Helsinki, available for an immediate start.</dd>
         </div>
       </dl>
-    </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="wrap">
-      <h2 class="section-label">contact</h2>
-      <p class="section-note">Looking to start as soon as possible. Reach out any of these ways.</p>
-
-      <div class="row-list">
-        <a class="row-link contact-row" href="mailto:mire.abdirahman97@gmail.com">
-          <span class="row-key">Email</span>
-          <span class="row-val">mire.abdirahman97@gmail.com</span>
-        </a>
-        <a class="row-link contact-row" href="https://www.linkedin.com/in/abdimire/" target="_blank" rel="noopener">
-          <span class="row-key">LinkedIn</span>
-          <span class="row-val">linkedin.com/in/abdimire</span>
-        </a>
-        <a class="row-link contact-row" href="https://github.com/Mireabdi" target="_blank" rel="noopener">
-          <span class="row-key">GitHub</span>
-          <span class="row-val">github.com/Mireabdi</span>
-        </a>
+      <div class="hero-actions">
+        <a href="projects.html" class="btn btn-primary">View lab work</a>
+        <a href="resume.html" class="btn btn-secondary">Get in touch</a>
       </div>
     </div>
   </section>
@@ -196,17 +108,5 @@
   </div>
 </footer>
 
-<script>
-  document.getElementById("copyright-year").textContent = "© " + new Date().getFullYear() + " Abdirahman Mire";
-
-  document.getElementById("theme-toggle").addEventListener("click", function () {
-    var current = document.documentElement.getAttribute("data-theme") || "light";
-    var next = current === "dark" ? "light" : "dark";
-    document.documentElement.setAttribute("data-theme", next);
-    localStorage.setItem("mireSite.theme", next);
-    var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute("content", next === "dark" ? "#15181d" : "#f1f2f4");
-  });
-</script>
 </body>
 </html>

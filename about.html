@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem("mireSite.theme");
+    var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+    document.write('<meta name="theme-color" content="' + (theme === "dark" ? "#15181d" : "#f1f2f4") + '">');
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Abdirahman Mire</title>
+<meta name="description" content="About Abdirahman Mire — an IT student in Helsinki with a background in customer service, moving into helpdesk and service desk work.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About — Abdirahman Mire">
+<meta property="og:description" content="About Abdirahman Mire — an IT student in Helsinki with a background in customer service, moving into helpdesk and service desk work.">
+<meta property="og:url" content="https://mireabdi.github.io/about.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314171c'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='700' fill='%232f6f6b' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="assets/main.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="wrap">
+    <a class="logo" href="index.html">mire<span class="logo-at">@</span>it-support</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+
+  <div class="page-intro">
+    <div class="wrap">
+      <p class="section-label">mire@it-support:~/about$</p>
+      <h1 class="page-heading">About</h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="prose">
+        <p>My interest in technology didn't start in a classroom. I've been the person family and friends call when a computer won't boot, a printer won't connect, or Windows needs reinstalling — going back to when I was a kid. There was never a single moment I decided to get into IT; it's just always been the thing I was already doing, long before it was a career plan.</p>
+        <p>At Haaga-Helia I've studied networks, operating systems, and security in a structured way, which filled in a lot of the "why" behind things I'd already learned to do by trial and error. Alongside my studies, I've built a hands-on lab portfolio — Windows Server, Active Directory, DNS/DHCP, file permissions — each one backed up with screenshots and a real troubleshooting case, not just a list of steps I followed. I wanted proof I could point to, not just a list of course names.</p>
+        <p>Five years in customer service taught me what IT support actually takes, and it's less technical than people expect: listen first, solve second. A frustrated user doesn't want a lecture on DNS — they want to get back to work. That means asking the right questions before jumping to a fix, explaining what's happening in plain language, and staying calm when someone else isn't. Those habits carry over directly — the technical side is something I can keep building, but the patience and the listening are already there.</p>
+        <p>To me, IT support is mostly about restoring order to someone's day as fast as possible, and being honest about what's actually going on when you can't fix it instantly. In my lab work, I deliberately broke things — a wrong DNS setting, a locked account, a missing group membership — so I'd know what each failure actually looks like before I see it on a real ticket. That's the habit I want to bring to a service desk: don't guess, check the simplest explanation first, fix the real problem, and confirm it's actually fixed before closing the ticket.</p>
+        <p>Right now I'm looking for a first role in helpdesk or service desk work, somewhere I can put these habits to use on real tickets and keep learning from people who've been doing this longer than I have. Longer term, I want this to grow into a proper career in IT — support is where I want to start, not where I plan to stop.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span id="copyright-year">© 2025 Abdirahman Mire</span>
+    <a href="https://github.com/Mireabdi/mireabdi.github.io" target="_blank" rel="noopener">Source on GitHub</a>
+  </div>
+</footer>
+
+</body>
+</html>
