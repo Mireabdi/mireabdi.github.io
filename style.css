@@ -9,6 +9,8 @@
   --status-ok: #3f8f5f;
   --rule: rgba(20, 23, 28, 0.13);
   --max-width: 760px;
+  --surface: color-mix(in srgb, var(--ink) 3%, var(--paper));
+  --max-width-wide: 1000px;
 }
 
 :root[data-theme="dark"] {
@@ -21,6 +23,7 @@
   --signal-tint: rgba(95, 196, 189, 0.1);
   --status-ok: #4ecb82;
   --rule: rgba(255, 255, 255, 0.12);
+  --surface: color-mix(in srgb, var(--ink) 6%, var(--paper));
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -38,8 +41,14 @@ body {
 
 a { color: inherit; }
 
+code {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.9em;
+}
+
 .mono, .logo, .section-label, .info-row dt, .spec-row dt,
-.row-tags span, .row-key, .status-value, .nav-links a, .btn {
+.row-tags span, .row-key, .status-value, .nav-links a, .btn,
+.case-meta {
   font-family: "IBM Plex Mono", ui-monospace, monospace;
 }
 
@@ -52,6 +61,29 @@ a { color: inherit; }
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 1.5rem;
+}
+
+/* --max-width-wide (1000px) is reserved for a future Projects grid per
+   the style guide, scoped to that page only -- not applied yet since
+   the current case-study entries are long-form and read better at the
+   standard 760px width. */
+.wrap-wide {
+  max-width: var(--max-width-wide);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.text-muted {
+  color: var(--slate);
+  font-size: 0.85rem;
+}
+
+.resume-cta {
+  margin-bottom: 0.6rem;
+}
+
+.resume-cta + .text-muted {
+  margin-top: 0.5rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -202,6 +234,21 @@ a { color: inherit; }
 
 .hero-actions { display: flex; gap: 0.85rem; flex-wrap: wrap; }
 
+/* Proof strip (Home) reuses .info-panel/.info-row exactly as-is; the
+   kicker above it reuses .section-label -- no new visual style. */
+
+/* ===== Inner-page intro (About / Projects / Resume) ===== */
+.page-intro {
+  padding: 3rem 0 1rem;
+}
+
+.page-heading {
+  font-size: clamp(1.6rem, 4vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.3rem;
+}
+
 .btn {
   display: inline-block;
   font-size: 0.82rem;
@@ -305,6 +352,62 @@ a { color: inherit; }
 
 .contact-row .row-val { font-size: 0.92rem; }
 
+/* ===== Case study entries (Projects) =====
+   Extends the row-list/section grammar with a ticket-style metadata
+   line and long-form write-up per entry -- not a new card component. */
+.case-entry .section-label {
+  margin-top: 1.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.case-entry .section-label:first-of-type { margin-top: 0; }
+
+.case-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--slate);
+  margin-bottom: 0.5rem;
+}
+
+.case-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--status-ok);
+}
+
+.case-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.case-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.82rem;
+  color: var(--signal);
+  text-decoration: none;
+  border-bottom: 1px solid var(--signal);
+}
+
+.case-link:hover { color: var(--ink); border-color: var(--ink); }
+
+/* Generic bullet list for prose sections (case "what was built",
+   resume education) -- body copy, never mono per the typography rule. */
+.content-list {
+  list-style: disc;
+  padding-left: 1.25rem;
+  max-width: 62ch;
+  margin-bottom: 1.1rem;
+}
+
+.content-list li { margin-bottom: 0.5rem; }
+.content-list li:last-child { margin-bottom: 0; }
+
 /* ===== Spec list (skills) ===== */
 .spec-list { border-top: 1px solid var(--rule); }
 
@@ -322,6 +425,23 @@ a { color: inherit; }
 }
 
 .spec-row dd { font-size: 0.92rem; }
+
+/* ===== Timeline (Resume experience / education) =====
+   Extends spec-row with a thin rule line down the label column,
+   connecting entries chronologically. No new dl/grid pattern. */
+.timeline-row {
+  border-left: 1px solid var(--rule);
+  padding-left: 1rem;
+}
+
+.timeline-role {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-desc {
+  font-size: 0.92rem;
+}
 
 /* ===== Footer ===== */
 .site-footer {
@@ -371,7 +491,7 @@ a { color: inherit; }
     --rule: rgba(20, 23, 28, 0.25);
   }
 
-  .site-header, .theme-toggle, .status-dot, .hero-actions {
+  .site-header, .theme-toggle, .status-dot, .hero-actions, .resume-cta {
     display: none;
   }
 
