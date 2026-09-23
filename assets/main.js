@@ -9,7 +9,7 @@
   function setCopyrightYear() {
     var yearEl = document.getElementById("copyright-year");
     if (!yearEl) return;
-    yearEl.textContent = "© " + new Date().getFullYear() + " Abdirahman Mire";
+    yearEl.textContent = "© " + new Date().getFullYear() + " Abdi Mire";
   }
 
   function initThemeToggle() {

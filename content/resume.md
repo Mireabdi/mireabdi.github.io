@@ -10,16 +10,19 @@ and Education are now real content, not placeholders. Remaining open item:
 the CV PDF file itself still needs to be supplied (see Contact/Download CV
 note below).
 
+**Translated to Finnish 2026-09-24** (owner request: site is Finnish-only for
+now). All page copy below is Finnish; internal notes/labels stay English.
+
 ---
 
-## Section label: resume / contact
+## Section label: ansioluettelo / yhteystiedot
 
-**Intro line (carries over, adapted for standalone page):**
-Looking to start as soon as possible. Full background below, or reach out
-directly.
+**Intro line (Finnish page copy):**
+Valmis aloittamaan mahdollisimman pian. Koko tausta alla, tai ota suoraan
+yhteyttä.
 
 **Download CV button:**
-Label: "Download CV" — links to a placeholder file path (owner to supply the
+Label: "Lataa CV" — links to a placeholder file path (owner to supply the
 actual PDF and path; e.g. `/assets/Abdi-Mire-CV.pdf`). No PDF is produced
 here — this page's on-page content is the resume itself.
 
@@ -27,39 +30,40 @@ here — this page's on-page content is the resume itself.
 
 ## Experience
 
-**Phone Interviewer** — Kantar
-2021 – Jan 2023
-- Conducted structured phone interviews for market research studies,
-  recording responses accurately and documenting each call precisely.
-- Habits that carry directly into IT support: following a defined process,
-  logging things clearly, staying accurate under time pressure.
+**Puhelinhaastattelija** — Kantar
+2021 – tammikuu 2023
+- Toteutti strukturoituja puhelinhaastatteluja markkinatutkimuksiin, kirjasi
+  vastaukset tarkasti ja dokumentoi jokaisen puhelun huolellisesti.
+- Taitoja, jotka siirtyvät suoraan tikettien kirjaamiseen ja määritellyn
+  prosessin noudattamiseen aikapaineen alla.
 
-**Retail Associate** — Barona (Prisma, S-Market)
+**Myyjä** — Barona (Prisma, S-Market)
 2018 – 2021
-- Customer service, checkout, sales, and shelving/stock picking in a
-  fast-paced retail environment.
-- Regularly resolved customer issues on the spot — the same listen-first,
-  solve-second approach that carries over into helpdesk work.
+- Asiakaspalvelua, kassatyötä, myyntiä sekä hyllytystä ja keräilyä
+  nopeatempoisessa vähittäiskauppaympäristössä.
+- Ratkoi asiakkaiden ongelmia säännöllisesti heti paikan päällä: sama
+  kuuntele ensin, ratkaise sitten -periaate, joka siirtyy suoraan
+  helpdesk-työhön.
 
-(Five years total customer service experience, referenced elsewhere on the
-site in About and the Home proof strip.)
+(Yhteensä viisi vuotta asiakaspalvelukokemusta, mainittu myös About-sivulla
+ja Home-sivun proof stripissä.)
 
 ---
 
 ## Education
 
-**Haaga-Helia University of Applied Sciences** — Helsinki
-Bachelor of Business Administration (Tradenomi AMK), Information Technology
-2023 – 2026 (expected graduation spring 2026)
+**Haaga-Helia ammattikorkeakoulu** — Helsinki
+Tradenomi (AMK), tietotekniikka
+2023–2026 (arvioitu valmistuminen keväällä 2026)
 
-- Coursework covering networks, operating systems, and security.
-- Independent hands-on lab portfolio built alongside studies (see Projects
-  page) — Windows Server, Active Directory, DNS/DHCP, and file services, each
-  documented with screenshots and a real troubleshooting case.
+- Opinnot kattoivat verkot, käyttöjärjestelmät ja tietoturvan.
+- Itsenäinen käytännön projektiportfolio rakennettu opintojen ohella (katso
+  Projektit-sivu): Windows Server, Active Directory, DNS/DHCP ja
+  tiedostopalvelut, jokainen dokumentoitu kuvakaappauksin ja aidolla
+  vianselvitystapauksella.
 
 **Suomen Liikemiesten Kauppaopisto** — Helsinki
-Vocational Qualification in Business and Administration (Liiketalouden
-perustutkinto)
+Liiketalouden perustutkinto
 2015 – 2018
 
 ---
@@ -74,16 +78,16 @@ The "sourcing notes" block right after it is for the owner/reviewer only —
 those parenthetical tags are NOT page content and must never be rendered on
 the live site. Build the skills list from the clean version only.**
 
-**Platforms** (page copy)
+**Alustat** (page copy)
 Windows Server 2022, Windows 11, VMware Workstation
 
-**Directory & Identity** (page copy)
+**Hakemisto ja identiteetti** (page copy)
 Active Directory Domain Services, Group Policy / GPO
 
-**Networking** (page copy)
-DNS, DHCP, TCP/IP fundamentals, SMB & NTFS permissions
+**Verkot** (page copy)
+DNS, DHCP, TCP/IP-perusteet, SMB- ja NTFS-oikeudet
 
-**Tools** (page copy)
+**Työkalut** (page copy)
 PowerShell, RSAT, Git & GitHub
 
 ---
@@ -99,11 +103,12 @@ than generic "fundamentals" wording.
 
 ## Contact
 
-Carries over unchanged from the current site.
+Carries over unchanged from the current site. Label translated ("Email" →
+"Sähköposti"); LinkedIn/GitHub are proper nouns, left as-is.
 
 | Method | Value |
 |---|---|
-| Email | mire.abdirahman97@gmail.com |
+| Sähköposti | mire.abdirahman97@gmail.com |
 | LinkedIn | linkedin.com/in/abdimire |
 | GitHub | github.com/Mireabdi |
 

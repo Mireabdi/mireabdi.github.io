@@ -19,206 +19,224 @@ original voice used none) and 7 repeated uses of "actually." Also swapped the
 "File Services — NTFS & Share Permissions") for a colon, for the same reason.
 No facts, claims, or technical details changed.
 
+**Translated to Finnish 2026-09-24** (owner request: site is Finnish-only for
+now). All page copy below (labels, titles, prose, bullet lists) is now
+Finnish; the case-by-case structure and English section labels ("Metadata
+line:", "Problem / scenario:", etc.) are internal doc structure and stay as
+they were, same as the rest of this file's process notes.
+
 ---
 
 ## Section intro
 
-**Section label:** projects
+**Section label:** projektit
 
-**Section note (carries over, lightly trimmed):**
-Built in VMware on Windows Server 2022. Each lab below is documented with
-screenshots and a troubleshooting case: a fault deliberately introduced into
-a working setup, then diagnosed and fixed the way it would be on a real
-ticket, not just a checklist of steps completed.
+**Section note (Finnish page copy):**
+Rakennettu VMwaressa Windows Server 2022:lla. Jokainen alla oleva labra on
+dokumentoitu kuvakaappauksin ja vianselvitystapauksella: tarkoituksella
+toimivaan ympäristöön tuotu vika, joka sitten diagnosoitiin ja korjattiin
+kuten oikealla tiketillä, ei vain suoritettuna tarkistuslistana.
 
 ---
 
 ## Case 01
 
-**Metadata line:** `Case 01 · Status: Resolved · Stack: Windows 11 Pro, VMware, DNS`
+**Metadata line (Finnish page copy):** `Tapaus 01 · Tila: Ratkaistu · Tekniikat: Windows 11 Pro, VMware, DNS`
 
-**Title:** Workstation Setup
+**Title (Finnish page copy):** Työaseman käyttöönotto
 
-**Problem / scenario:**
-A new Windows 11 Pro workstation needs to go from a blank machine to something
-a real user can safely log into: installed, updated, locked down, with
-accounts set up correctly and a shared folder people can use. Partway
-through, the machine developed a fault that's one of the most common helpdesk
-tickets there is: "the internet doesn't work."
+**Problem / scenario (Finnish page copy):**
+Uuden Windows 11 Pro -työaseman pitää edetä tyhjästä koneesta sellaiseksi,
+että oikea käyttäjä voi kirjautua siihen turvallisesti: asennettu, päivitetty,
+lukittu asianmukaisesti, tilit oikein määriteltyinä ja jaettu kansio, jota
+ihmiset voivat käyttää. Kesken prosessin koneeseen ilmaantui vika, joka on
+yksi yleisimmistä helpdesk-tiketeistä: "internet ei toimi."
 
-**What was built:**
-- Clean install of Windows 11 Pro, machine renamed and set up with a local
-  admin account, VMware Tools installed, Windows Update run to completion.
-- Basic hardening: real-time antivirus protection and the firewall confirmed
-  active on all network profiles. (BitLocker drive encryption wasn't available
-  in this virtual environment due to a missing TPM chip, a limitation of the
-  lab setup noted rather than hidden.)
-- Two standard user accounts created, added to a local "Helpdesk-Local" group,
-  and checked to confirm neither had admin rights. A basic but important
-  security habit: don't hand out more access than a role needs.
-- A shared folder (`PublicDocs`) set up with separate share and NTFS
-  permissions: Everyone could read it, the Helpdesk-Local group could edit
-  files in it, and it was tested by logging in as a standard user and
-  saving a file.
-- Printing capability confirmed by running a test print from Notepad and
-  saving the output as a PDF via the built-in Microsoft Print to PDF option.
+**What was built (Finnish page copy):**
+- Windows 11 Pro asennettu puhtaalta pöydältä, kone nimetty uudelleen ja
+  määritetty paikallisella pääkäyttäjätilillä, VMware Tools asennettu,
+  Windows Update ajettu loppuun asti.
+- Perussuojaus: reaaliaikainen virustorjunta ja palomuuri varmistettu
+  aktiivisiksi kaikissa verkkoprofiileissa. (BitLocker-asemasalausta ei ollut
+  saatavilla tässä virtuaaliympäristössä puuttuvan TPM-sirun vuoksi, mikä on
+  labraympäristön rajoitus, ei piilotettu asia.)
+- Kaksi tavallista käyttäjätiliä luotu, lisätty paikalliseen
+  "Helpdesk-Local"-ryhmään ja tarkistettu, ettei kummallakaan ollut
+  pääkäyttäjäoikeuksia. Perustava mutta tärkeä tietoturvatapa: älä jaa
+  enempää oikeuksia kuin rooli vaatii.
+- Jaettu kansio (`PublicDocs`) määritetty erillisillä jako- ja
+  NTFS-oikeuksilla: kaikki pystyivät lukemaan sitä, Helpdesk-Local-ryhmä
+  pystyi muokkaamaan tiedostoja siinä, ja toiminta testattiin kirjautumalla
+  sisään tavallisena käyttäjänä ja tallentamalla tiedosto.
+- Tulostustoiminto varmistettu tulostamalla testisivu Muistiosta ja
+  tallentamalla tuloste PDF-muotoon sisäänrakennetulla Microsoft Print to
+  PDF -toiminnolla.
 
-**The case: DNS misconfiguration:**
-The workstation could reach the internet by IP address (a ping to 8.8.8.8
-worked fine) but couldn't open any websites or reach anything by name. That
-split (IP works, names don't) points straight at DNS, the service that
-translates a name like "google.com" into an address a computer can
-use. Checking the network adapter's settings showed the DNS server had been
-manually set to an address that wasn't a real DNS server. Resetting it to pull DNS
-settings automatically (via DHCP) and clearing the DNS cache fixed it
-immediately. Confirmed with a successful ping and a successful `nslookup`.
+**The case: DNS misconfiguration (Finnish page copy):**
+Työasema pääsi internetiin IP-osoitteella (ping osoitteeseen 8.8.8.8 toimi
+hyvin), mutta ei pystynyt avaamaan sivustoja tai tavoittamaan mitään nimellä.
+Tämä jako (IP toimii, nimet eivät) osoittaa suoraan DNS:ään, palveluun joka
+muuttaa nimen kuten "google.com" osoitteeksi, jota tietokone voi käyttää.
+Verkkosovittimen asetuksista löytyi DNS-palvelin, joka oli asetettu
+manuaalisesti osoitteeseen, joka ei ollut oikea DNS-palvelin. Asetuksen
+palauttaminen automaattiseksi (DHCP:n kautta) ja DNS-välimuistin
+tyhjentäminen korjasi ongelman heti. Varmistettu onnistuneella pingillä ja
+onnistuneella `nslookup`-komennolla.
 
-**Why it matters:**
-"The internet is down" is one of the most common tickets a helpdesk gets, and
-it's often not a connectivity problem: it's DNS. Knowing to
-test both an IP address and a domain name is what separates a five-minute fix
-from a wasted afternoon chasing the wrong cause.
+**Why it matters (Finnish page copy):**
+"Internet ei toimi" on yksi yleisimmistä tiketeistä, joita helpdesk saa, eikä
+kyse ole usein yhteysongelmasta: kyse on DNS:stä. Se, että osaa testata sekä
+IP-osoitteen että verkkotunnuksen, erottaa viiden minuutin korjauksen
+hukatusta iltapäivästä väärän syyn perässä juoksemisessa.
 
 ---
 
 ## Case 02
 
-**Metadata line:** `Case 02 · Status: Resolved · Stack: Windows Server 2022, Active Directory, Group Policy`
+**Metadata line (Finnish page copy):** `Tapaus 02 · Tila: Ratkaistu · Tekniikat: Windows Server 2022, Active Directory, Group Policy`
 
-**Title:** Active Directory
+**Title (Finnish page copy):** Active Directory
 
-**Problem / scenario:**
-Most organizations don't manage user accounts and permissions one machine at a
-time. They use a central directory (Active Directory) so IT can create an
-account once and control what it can access everywhere. This lab builds that
-directory from the ground up: a domain controller, an organized structure for
-accounts, a workstation joined to it, and a policy enforced across
-the network, plus one of the most common tickets a service desk handles.
+**Problem / scenario (Finnish page copy):**
+Useimmat organisaatiot eivät hallinnoi käyttäjätilejä ja käyttöoikeuksia yksi
+kone kerrallaan. Ne käyttävät keskitettyä hakemistoa (Active Directory),
+jotta IT voi luoda tilin kerran ja hallita, mihin sillä pääsee käsiksi
+kaikkialla. Tämä labra rakentaa kyseisen hakemiston alusta asti: toimialueen
+ohjauskoneen, jäsennellyn rakenteen tileille, työaseman joka liitetään
+siihen, ja käytännön joka valvotaan koko verkossa, sekä yhden yleisimmistä
+tiketeistä joita service desk käsittelee.
 
-**What was built:**
-- A domain controller (`DC01`, Windows Server 2022) set up with a static
-  network configuration and its own DNS service, hosting a new domain
-  (`mire.local`).
-- An organizational structure (OUs) separating users, groups, workstations,
-  and IT administration, built with PowerShell on the domain controller (which
-  has no graphical interface). This structure is what lets an admin later
-  apply a setting to "everyone in Sales" instead of editing forty individual
-  machines.
-- Domain user accounts and security groups created and placed into the right
-  structure, so permissions are managed by group membership rather than
-  one-by-one.
-- A Windows 11 workstation joined to the domain, pointed at the domain
-  controller for DNS, with a domain-account login tested and confirmed
-  working.
-- A Group Policy that blocks standard users from opening Control Panel or PC
-  settings, applied once, centrally, and enforced automatically on every
-  machine in scope.
+**What was built (Finnish page copy):**
+- Toimialueen ohjauskone (`DC01`, Windows Server 2022) määritetty kiinteällä
+  verkkoasetuksella ja omalla DNS-palvelullaan, jolla isännöidään uutta
+  toimialuetta (`mire.local`).
+- Organisaatiorakenne (OU:t) joka erottelee käyttäjät, ryhmät, työasemat ja
+  IT-hallinnon, rakennettu PowerShellillä toimialueen ohjauskoneella (jossa
+  ei ole graafista käyttöliittymää). Tämä rakenne mahdollistaa sen, että
+  ylläpitäjä voi myöhemmin ottaa käyttöön asetuksen "kaikille myynnissä" sen
+  sijaan, että muokkaisi neljääkymmentä yksittäistä konetta.
+- Toimialueen käyttäjätilit ja suojausryhmät luotu ja sijoitettu oikeaan
+  rakenteeseen, jotta käyttöoikeuksia hallitaan ryhmäjäsenyyden kautta eikä
+  yksitellen.
+- Windows 11 -työasema liitetty toimialueeseen, DNS osoitettu toimialueen
+  ohjauskoneeseen, ja toimialuetilin kirjautuminen testattu ja todettu
+  toimivaksi.
+- Group Policy joka estää tavallisia käyttäjiä avaamasta Ohjauspaneelia tai
+  PC-asetuksia, otettu käyttöön kerran keskitetysti ja valvottu
+  automaattisesti kaikilla soveltamisalueen koneilla.
 
-**The case: account lockout:**
-A user couldn't log in. The error said the account was locked. This happens
-when Active Directory's lockout policy trips after too many failed login
-attempts in a row. The account's locked status was confirmed in Active
-Directory Users and Computers, unlocked, and the login retested successfully.
+**The case: account lockout (Finnish page copy):**
+Käyttäjä ei päässyt kirjautumaan sisään. Virheilmoitus kertoi tilin olevan
+lukittu. Näin käy, kun Active Directoryn lukitussääntö laukeaa liian monen
+peräkkäisen epäonnistuneen kirjautumisyrityksen jälkeen. Tilin lukittu tila
+varmistettiin Active Directory Users and Computers -työkalussa, tili
+avattiin, ja kirjautuminen testattiin uudelleen onnistuneesti.
 
-**Why it matters:**
-Account lockouts are one of the highest-volume ticket types on any service
-desk, usually simple to fix, but only if you know exactly where to look and
-don't guess. This case also shows why centralized account management matters:
-a lockout policy that applies to every account by default is a security
-control, not just an inconvenience, and unlocking an account correctly (rather
-than, say, resetting the password unnecessarily) avoids creating a second
-problem while fixing the first.
+**Why it matters (Finnish page copy):**
+Tilien lukittuminen on yksi yleisimmistä tikettityypeistä millä tahansa
+service deskillä, yleensä helppo korjata, mutta vain jos tietää tarkalleen
+mistä katsoa eikä arvaa. Tämä tapaus näyttää myös, miksi keskitetty
+tilienhallinta on tärkeää: lukitussääntö joka koskee kaikkia tilejä
+oletuksena on tietoturvakontrolli, ei vain hankaluus, ja tilin avaaminen
+oikein (eikä esimerkiksi salasanan turhaa nollaamista) välttää toisen
+ongelman syntymisen ensimmäistä korjattaessa.
 
 ---
 
 ## Case 03
 
-**Metadata line:** `Case 03 · Status: Resolved · Stack: Windows Server 2022, DNS, DHCP`
+**Metadata line (Finnish page copy):** `Tapaus 03 · Tila: Ratkaistu · Tekniikat: Windows Server 2022, DNS, DHCP`
 
-**Title:** DNS & DHCP: Network Troubleshooting
+**Title (Finnish page copy):** DNS & DHCP: verkon vianselvitys
 
-**Problem / scenario:**
-Every device on a network needs two things to work properly: an address (so
-it can be found) and a way to translate names into addresses (so people don't
-have to memorize numbers). This lab sets up both services on the domain
-controller and validates them properly, then walks through a deliberately
-broken configuration to practice diagnosing it: a network-services version of
-the same DNS problem from Case 01, but from the server/domain side rather than
-a single misconfigured PC.
+**Problem / scenario (Finnish page copy):**
+Jokainen verkon laite tarvitsee kaksi asiaa toimiakseen kunnolla: osoitteen
+(jotta se löytyy) ja tavan muuttaa nimet osoitteiksi (jotta ihmisten ei
+tarvitse muistaa numeroita). Tämä labra ottaa käyttöön molemmat palvelut
+toimialueen ohjauskoneella ja varmistaa niiden toimivuuden, minkä jälkeen
+käydään läpi tarkoituksella rikottu määritys diagnosoinnin harjoittelemiseksi:
+verkkopalveluversio samasta DNS-ongelmasta kuin tapauksessa 01, mutta
+palvelin-/toimialuepuolelta yhden virheellisesti määritetyn koneen sijaan.
 
-**What was built:**
-- DNS configured on the domain controller, including forwarders so internal
-  users can also resolve normal internet addresses, not just internal ones.
-  Verified with `nslookup` against both an internal name and an internet
-  address, plus a full DNS health check (`dcdiag /test:dns`).
-- DHCP installed and set up with an address pool (192.168.20.0/24) so devices
-  on the network get an IP address, default gateway, and DNS server
-  automatically instead of needing manual configuration on every machine.
-- Dynamic DNS registration configured so that when a workstation gets or
-  renews its IP address, it automatically registers itself in DNS, no manual
-  entry needed. Verified by looking up the workstation's own hostname.
+**What was built (Finnish page copy):**
+- DNS määritetty toimialueen ohjauskoneelle, mukaan lukien edelleenlähetykset
+  (forwarders), jotta sisäiset käyttäjät voivat selvittää myös tavallisia
+  internet-osoitteita, ei vain sisäisiä. Varmistettu `nslookup`-komennolla
+  sekä sisäistä nimeä että internet-osoitetta vasten, sekä täydellä
+  DNS-terveystarkistuksella (`dcdiag /test:dns`).
+- DHCP asennettu ja määritetty osoitealueella (192.168.20.0/24), jotta
+  verkon laitteet saavat IP-osoitteen, oletusyhdyskäytävän ja DNS-palvelimen
+  automaattisesti ilman, että jokainen kone pitää määrittää käsin.
+- Dynaaminen DNS-rekisteröinti määritetty niin, että kun työasema saa tai
+  uusii IP-osoitteensa, se rekisteröityy automaattisesti DNS:ään, ilman
+  manuaalista lisäystä. Varmistettu hakemalla työaseman oma isäntänimi.
 
-**The case: wrong DNS server on a domain client:**
-A workstation couldn't resolve any internal domain resources. The workstation
-had a public DNS server configured instead of the domain controller, a
-subtle but important distinction, because public DNS servers have no idea a
-private domain like `mire.local` even exists. Pointing the workstation back at
-the domain controller's DNS service fixed the resolution immediately,
-confirmed with `ipconfig /all` and `nslookup`.
+**The case: wrong DNS server on a domain client (Finnish page copy):**
+Työasema ei pystynyt selvittämään mitään sisäisiä toimialueen resursseja.
+Työasemalle oli määritetty julkinen DNS-palvelin toimialueen ohjauskoneen
+sijaan, hienovarainen mutta tärkeä ero, koska julkiset DNS-palvelimet eivät
+tiedä yksityisen toimialueen kuten `mire.local` olemassaolosta lainkaan.
+Työaseman osoittaminen takaisin toimialueen ohjauskoneen DNS-palveluun
+korjasi nimenselvityksen heti, mikä varmistettiin komennoilla `ipconfig /all`
+ja `nslookup`.
 
-**Why it matters:**
-DNS and DHCP are the two services that make a network "just work" without
-users noticing them, until they're wrong, at which point everything from
-opening a shared drive to reaching an internal website can quietly break.
-Recognizing "wrong DNS server, not a broken network" is a distinction that
-saves real troubleshooting time, especially in a domain environment where
-public DNS simply cannot answer for internal names.
+**Why it matters (Finnish page copy):**
+DNS ja DHCP ovat ne kaksi palvelua, jotka saavat verkon "vain toimimaan"
+ilman että käyttäjät huomaavat niitä, kunnes ne ovat väärin, jolloin kaikki
+jaetun aseman avaamisesta sisäisen sivuston tavoittamiseen voi hiljaa
+hajota. Sen tunnistaminen, että kyse on "väärästä DNS-palvelimesta, ei
+rikkinäisestä verkosta", on ero joka säästää aitoa vianselvitysaikaa,
+etenkin toimialueympäristössä, jossa julkinen DNS ei yksinkertaisesti pysty
+vastaamaan sisäisistä nimistä.
 
 ---
 
 ## Case 04
 
-**Metadata line:** `Case 04 · Status: Resolved · Stack: Windows Server 2022, NTFS, SMB`
+**Metadata line (Finnish page copy):** `Tapaus 04 · Tila: Ratkaistu · Tekniikat: Windows Server 2022, NTFS, SMB`
 
-**Title:** File Services: NTFS & Share Permissions
+**Title (Finnish page copy):** Tiedostopalvelut: NTFS- ja jako-oikeudet
 
-**Problem / scenario:**
-Shared drives are one of the most common things a service desk supports, and
-"I can't get into the folder" is one of the most common tickets. This lab
-builds a realistic department file-sharing setup (separate folders for
-different teams, permissions handled through groups rather than individual
-users), then walks through diagnosing an access-denied error the right way.
+**Problem / scenario (Finnish page copy):**
+Jaetut asemat ovat yksi yleisimmistä asioista, joita service desk tukee, ja
+"en pääse kansioon" on yksi yleisimmistä tiketeistä. Tämä labra rakentaa
+realistisen osaston tiedostonjakoympäristön (erilliset kansiot eri
+tiimeille, oikeudet hallitaan ryhmien kautta yksittäisten käyttäjien
+sijaan), minkä jälkeen käydään läpi access denied -virheen diagnosointi
+oikealla tavalla.
 
-**What was built:**
-- A shared folder structure created on the file server and published to the
-  network over SMB as `Departments`.
-- Two Active Directory groups (`HR_RW`, `IT_RW`) created specifically to
-  control access. Permissions were granted only to groups, never to
-  individual people, which is what makes access easy to audit and change later
-  (add or remove someone from a group, rather than editing permissions on
-  every folder).
-- Share-level permissions kept simple and only used for general visibility of
-  the share; the real access control was handled separately through NTFS
-  permissions on each department's subfolder, a standard real-world pattern
-  that keeps "can you see this exists" separate from "can you use it."
-- Department subfolders (HR, IT) each locked down so only their matching
-  group could modify files, with administrators retaining full control.
-  Configured remotely with RSAT, since the file server itself runs without a
-  graphical interface (Server Core).
+**What was built (Finnish page copy):**
+- Jaettu kansiorakenne luotu tiedostopalvelimelle ja julkaistu verkkoon
+  SMB:n kautta nimellä `Departments`.
+- Kaksi Active Directory -ryhmää (`HR_RW`, `IT_RW`) luotu nimenomaan
+  käyttöoikeuksien hallintaan. Oikeudet myönnettiin vain ryhmille, ei
+  koskaan yksittäisille henkilöille, mikä tekee pääsystä helpon tarkastaa
+  ja muuttaa myöhemmin (lisätään tai poistetaan joku ryhmästä, sen sijaan
+  että muokattaisiin oikeuksia jokaisessa kansiossa erikseen).
+- Jakotason oikeudet pidettiin yksinkertaisina ja niitä käytettiin vain
+  jaon yleiseen näkyvyyteen; varsinainen käyttöoikeuksien hallinta
+  hoidettiin erikseen NTFS-oikeuksilla kunkin osaston alikansiossa,
+  standardi käytännön malli joka pitää erillään "näetkö tämän
+  olemassaolon" ja "pääsetkö käyttämään sitä".
+- Osastojen alikansiot (HR, IT) lukittu niin, että vain vastaava ryhmä
+  pystyi muokkaamaan tiedostoja, ja ylläpitäjillä säilyi täysi hallinta.
+  Määritetty etänä RSAT:lla, koska tiedostopalvelin itse toimii ilman
+  graafista käyttöliittymää (Server Core).
 
-**The case: access denied to a department folder:**
-A domain user could see the shared drive but got an access-denied error
-opening the HR folder. Rather than immediately changing permissions (which
-risks opening access too widely or breaking something else), the group
-membership was checked first, and the user simply wasn't in the `HR_RW`
-group yet, even though the folder's permissions were already correct. Adding
-the user to the group and having them log in again (so their access token
-picked up the change) fixed it, with zero changes made to the actual
-permission structure.
+**The case: access denied to a department folder (Finnish page copy):**
+Toimialueen käyttäjä näki jaetun aseman, mutta sai access denied -virheen
+avatessaan HR-kansiota. Sen sijaan, että oikeuksia olisi muutettu heti (mikä
+voi avata pääsyn liian laajasti tai rikkoa jotain muuta), ensin
+tarkistettiin ryhmäjäsenyys, ja käyttäjä ei yksinkertaisesti ollut vielä
+`HR_RW`-ryhmässä, vaikka kansion oikeudet olivat jo oikein. Käyttäjän
+lisääminen ryhmään ja uudelleenkirjautuminen (jotta käyttöoikeustunnus
+päivittyi) korjasi asian, ilman että varsinaiseen oikeusrakenteeseen
+tehtiin yhtäkään muutosta.
 
-**Why it matters:**
-"Access denied" tickets are extremely common, and the instinct to immediately
-start changing permissions is usually the wrong first move: it's slower and
-riskier than checking who's in which group. This case is
-about diagnostic order: check the simplest, safest thing first before
-touching a configuration that other people also depend on.
+**Why it matters (Finnish page copy):**
+"Access denied" -tiketit ovat erittäin yleisiä, ja vaisto aloittaa heti
+oikeuksien muuttaminen on yleensä väärä ensimmäinen liike: se on hitaampaa
+ja riskialttiimpaa kuin sen tarkistaminen, kuka on missäkin ryhmässä. Tämä
+tapaus kertoo diagnosointijärjestyksestä: tarkista yksinkertaisin,
+turvallisin asia ensin, ennen kuin koskee määritykseen josta muutkin ovat
+riippuvaisia.

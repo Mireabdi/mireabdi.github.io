@@ -15,52 +15,59 @@ that's an easy add — just say what it is.
 
 ---
 
-**Section label:** about
+**Section label:** minusta
 
-### Paragraph 1 — Background (expanded)
+**Translated to Finnish 2026-09-24** (owner request: site is Finnish-only for
+now). Paragraph structure/order unchanged from the humanizer-pass version
+below; only the language changed.
 
-My interest in technology didn't start in a classroom. I've been the person
-family and friends call when a computer won't boot, a printer won't connect,
-or Windows needs reinstalling, going back to when I was a kid. There was
-never a single moment I decided to get into IT. It's just always been the
-thing I was already doing, long before it was a career plan.
+### Paragraph 1 — Background (Finnish page copy)
 
-### Paragraph 2 — Haaga-Helia studies (expanded)
+Kiinnostukseni tekniikkaan ei syntynyt luokkahuoneessa. Olen ollut se, jolle
+perhe ja kaverit soittavat, kun tietokone ei käynnisty, tulostin ei toimi tai
+Windows pitää asentaa uudelleen, jo lapsesta asti. Ei ollut yhtä hetkeä,
+jolloin päätin ryhtyä IT-alalle. Se on vain aina ollut asia, jota tein jo
+valmiiksi, kauan ennen kuin siitä tuli urasuunnitelma.
 
-At Haaga-Helia I've studied networks, operating systems, and security in a
-structured way, which filled in a lot of the "why" behind things I'd already
-learned to do by trial and error. Alongside my studies, I've built a hands-on
-lab portfolio (Windows Server, Active Directory, DNS/DHCP, file permissions),
-each one backed up with screenshots and a real troubleshooting case. I wanted
-proof I could point to, not just a list of course names.
+### Paragraph 2 — Haaga-Helia studies (Finnish page copy)
 
-### Paragraph 3 — Customer service → support mindset (expanded)
+Haaga-Heliassa olen opiskellut verkkoja, käyttöjärjestelmiä ja tietoturvaa
+jäsennellysti, mikä on täydentänyt sitä "miksi"-osaa asioista, jotka olin jo
+oppinut yrityksen ja erehdyksen kautta. Opintojen ohella olen rakentanut
+käytännön projektiportfolion (Windows Server, Active Directory, DNS/DHCP,
+tiedosto-oikeudet), joista jokainen on dokumentoitu kuvakaappauksin ja aidolla
+vianselvitystapauksella. Halusin todisteita, joihin voin viitata, en pelkkää
+listaa kurssien nimistä.
 
-Five years in customer service taught me what IT support takes, and it's less
-technical than people expect: listen first, solve second. A frustrated user
-doesn't want a lecture on DNS, they want to get back to work. That means
-asking the right questions before jumping to a fix, explaining what's
-happening in plain language, and staying calm when someone else isn't. Those
-habits carry over directly: the technical side is something I can keep
-building, but the patience and the listening are already there.
+### Paragraph 3 — Customer service → support mindset (Finnish page copy)
 
-### Paragraph 4 — What IT support means day to day (NEW)
+Viisi vuotta asiakaspalvelussa opetti, mitä IT-tuki oikeasti vaatii, ja se on
+vähemmän teknistä kuin moni luulee: kuuntele ensin, ratkaise sitten.
+Turhautunut käyttäjä ei halua luentoa DNS:stä, hän haluaa päästä takaisin
+töihin. Se tarkoittaa oikeiden kysymysten esittämistä ennen ratkaisuun
+hyppäämistä, tilanteen selittämistä selkokielellä ja rauhallisena pysymistä,
+vaikka toinen ei olisi. Nämä tavat siirtyvät suoraan mukaan: teknistä puolta
+voin yhä kehittää, mutta kärsivällisyys ja kuuntelemisen taito ovat jo
+olemassa.
 
-To me, IT support is mostly about restoring order to someone's day as fast as
-possible, and being honest about what's going on when you can't fix it
-instantly. In my lab work, I deliberately broke things: a wrong DNS setting, a
-locked account, a missing group membership, so I'd know what each failure
-looks like before I see it on a real ticket. That's the habit I want to bring
-to a service desk: don't guess, check the simplest explanation first, fix the
-real problem, and confirm it's fixed before closing the ticket.
+### Paragraph 4 — What IT support means day to day (Finnish page copy)
 
-### Paragraph 5 — Current goal (carries over, lightly expanded)
+Minulle IT-tuki tarkoittaa ennen kaikkea sen palauttamista, että jonkun päivä
+palaa raiteilleen mahdollisimman nopeasti, ja rehellisyyttä siitä, mitä on
+käynnissä, kun ongelmaa ei saa korjattua heti. Labratöissäni rikoin asioita
+tarkoituksella: väärän DNS-asetuksen, lukitun tilin, puuttuvan
+ryhmäjäsenyyden, jotta tietäisin miltä kukin vika näyttää ennen kuin näen sen
+oikealla tiketillä. Sitä tapaa haluan tuoda service deskille: älä arvaa,
+tarkista ensin yksinkertaisin selitys, korjaa varsinainen ongelma ja varmista,
+että se on korjattu ennen tiketin sulkemista.
 
-Right now I'm looking for a first role in helpdesk or service desk work,
-somewhere I can put these habits to use on real tickets and keep learning from
-people who've been doing this longer than I have. Longer term, I want this to
-grow into a proper career in IT: support is where I want to start, not where
-I plan to stop.
+### Paragraph 5 — Current goal (Finnish page copy)
+
+Juuri nyt etsin ensimmäistä työpaikkaa helpdesk- tai service desk -tehtävistä,
+paikkaa jossa voin hyödyntää näitä taitoja oikeilla tiketeillä ja oppia
+niiltä, jotka ovat tehneet tätä minua pidempään. Pidemmällä aikavälillä
+haluan tämän kasvavan kunnolliseksi IT-alan uraksi: tuki on paikka, josta
+haluan aloittaa, ei paikka johon aion jäädä.
 
 ---
 
@@ -68,4 +75,5 @@ I plan to stop.
 used none — just periods and colons) and 4 repeated uses of "actually" (a
 known overused AI filler word). Also trimmed a redundant "not just a list of
 X" repeated twice in paragraph 2 down to one. No facts, claims, or details
-changed.
+changed. (This pass was on the English text; the Finnish translation above
+preserves the same no-dash, no-filler voice.)
