@@ -62,37 +62,42 @@ here — this page's on-page content is the resume itself.
 ## Skills
 
 Carries over from the current site's Skills section, expanded/verified
-against what the 4 lab folders actually demonstrate. Items marked (lab-verified)
-were directly evidenced in the Helpdesk-Portfolio labs I reviewed; the rest
-carry over from the current site's existing list and are presumably from
-coursework or self-study not captured in these specific labs — owner should
-confirm those are still accurate.
+against what the 4 lab folders actually demonstrate.
 
-**Platforms**
-Windows Server 2022 (lab-verified), Windows 11 (lab-verified), VMware
-Workstation (lab-verified)
+**IMPORTANT FOR FRONTEND-DEV — the actual page copy is the plain list below.
+The "sourcing notes" block right after it is for the owner/reviewer only —
+those parenthetical tags are NOT page content and must never be rendered on
+the live site. Build the skills list from the clean version only.**
 
-**Directory & Identity**
-Active Directory Domain Services (lab-verified), Group Policy / GPO
-(lab-verified), Entra ID, Microsoft 365 admin fundamentals
+**Platforms** (page copy)
+Windows Server 2022, Windows 11, VMware Workstation
 
-**Networking**
-DNS (lab-verified), DHCP (lab-verified), TCP/IP fundamentals, SMB & NTFS
-permissions (lab-verified)
+**Directory & Identity** (page copy)
+Active Directory Domain Services, Group Policy / GPO, Entra ID, Microsoft 365
+admin fundamentals
 
-**Service Management**
+**Networking** (page copy)
+DNS, DHCP, TCP/IP fundamentals, SMB & NTFS permissions
+
+**Service Management** (page copy)
 ITIL v4 fundamentals, ServiceNow fundamentals
 
-**Tools**
-PowerShell (lab-verified), RSAT (lab-verified), Wireshark, Nmap, Git & GitHub
+**Tools** (page copy)
+PowerShell, RSAT, Wireshark, Nmap, Git & GitHub
 
-*(Flag for owner: Entra ID, Microsoft 365 admin, ServiceNow fundamentals,
-Wireshark, and Nmap are not evidenced anywhere in the 4 lab write-ups I
-reviewed — they're carried over from the current live site's Skills section
-as-is. If those come from coursework, certifications, or other work not
-represented in the Helpdesk-Portfolio repo, that's fine to keep them, just
-flagging that I couldn't verify them against source material the way I could
-verify the Windows Server/AD/DNS/DHCP/NTFS/PowerShell items above.)*
+---
+
+**Sourcing notes (owner/reviewer only — do not build this into the page):**
+Items directly evidenced in the Helpdesk-Portfolio lab folders I reviewed:
+Windows Server 2022, Windows 11, VMware Workstation, Active Directory Domain
+Services, Group Policy/GPO, DNS, DHCP, SMB & NTFS permissions, PowerShell,
+RSAT. The remaining items — Entra ID, Microsoft 365 admin fundamentals,
+TCP/IP fundamentals, ITIL v4 fundamentals, ServiceNow fundamentals, Wireshark,
+Nmap, Git & GitHub — carry over unchanged from the current live site's Skills
+section; I could not verify them against the 4 lab write-ups (they're
+presumably from coursework, self-study, or other project work not represented
+in the Helpdesk-Portfolio repo). Owner should confirm these are still
+accurate before frontend-dev builds the page.
 
 ---
 

@@ -21,8 +21,9 @@ with a plain-language reason it matters.
 
 **Section note (carries over, lightly trimmed):**
 Built in VMware on Windows Server 2022. Each lab below is documented with
-screenshots and a real troubleshooting case — not just a checklist of steps
-completed.
+screenshots and a troubleshooting case — a fault deliberately introduced into
+a working setup, then diagnosed and fixed the way it would be on a real
+ticket — not just a checklist of steps completed.
 
 ---
 
@@ -53,8 +54,8 @@ tickets there is: "the internet doesn't work."
   permissions — Everyone could read it, the Helpdesk-Local group could edit
   files in it, and it was tested by actually logging in as a standard user and
   saving a file.
-- Basic network printing configured and tested with a sample print job saved
-  to PDF.
+- Printing capability confirmed by running a test print from Notepad and
+  saving the output as a PDF via the built-in Microsoft Print to PDF option.
 
 **The case — DNS misconfiguration:**
 The workstation could reach the internet by IP address (a ping to 8.8.8.8
@@ -62,7 +63,7 @@ worked fine) but couldn't open any websites or reach anything by name. That
 split — IP works, names don't — points straight at DNS, the service that
 translates a name like "google.com" into an address a computer can actually
 use. Checking the network adapter's settings showed the DNS server had been
-manually set to an address that didn't exist. Resetting it to pull DNS
+manually set to an address that wasn't a real DNS server. Resetting it to pull DNS
 settings automatically (via DHCP) and clearing the DNS cache fixed it
 immediately — confirmed with a successful ping and a successful `nslookup`.
 
@@ -93,8 +94,10 @@ the network — plus one of the most common tickets a service desk handles.
   network configuration and its own DNS service, hosting a new domain
   (`mire.local`).
 - An organizational structure (OUs) separating users, groups, workstations,
-  and IT administration — this is what lets an admin later apply a setting to
-  "everyone in Sales" instead of editing forty individual machines.
+  and IT administration, built with PowerShell on the domain controller (which
+  has no graphical interface) — this structure is what lets an admin later
+  apply a setting to "everyone in Sales" instead of editing forty individual
+  machines.
 - Domain user accounts and security groups created and placed into the right
   structure, so permissions are managed by group membership rather than
   one-by-one.
@@ -108,8 +111,7 @@ the network — plus one of the most common tickets a service desk handles.
 **The case — account lockout:**
 A user couldn't log in — the error said the account was locked. This happens
 when Active Directory's lockout policy trips after too many failed login
-attempts (commonly after a password reset, when the old password is still
-saved somewhere). The account's locked status was confirmed in Active
+attempts in a row. The account's locked status was confirmed in Active
 Directory Users and Computers, unlocked, and the login retested successfully.
 
 **Why it matters:**
