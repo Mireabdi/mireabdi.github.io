@@ -178,6 +178,34 @@ code {
   margin-bottom: 0.9rem;
 }
 
+.hero-identity {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.hero-identity h1 { margin-bottom: 0; }
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+  flex-shrink: 0;
+}
+
+.avatar-about {
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+  float: left;
+  margin: 0.25rem 1.5rem 1rem 0;
+}
+
 .hero-statement {
   color: var(--slate);
   font-size: 1.05rem;
@@ -496,6 +524,7 @@ code {
   .row-tags { flex-wrap: wrap; }
   .contact-row { flex-direction: row; align-items: baseline; }
   .hero-actions .btn { flex: 1; text-align: center; }
+  .avatar-about { float: none; display: block; width: 140px; height: 140px; margin: 0 0 1.25rem; }
 }
 
 /* ===== Print ===== */
