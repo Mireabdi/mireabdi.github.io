@@ -5,13 +5,10 @@ Networking / Service Management / Tools) — it should NOT be duplicated on the
 About page, per the site plan. Contact info carries over unchanged from the
 current site.
 
-**IMPORTANT — gaps flagged for owner (see bottom of file too):** I do not have
-employer names, job titles, or dates for the 5 years of customer service work,
-or exact enrollment/expected-graduation dates for Haaga-Helia. Nothing in
-index.html or the Helpdesk-Portfolio lab folders contains this information.
-I've written the Experience and Education sections as clearly-marked
-placeholders — do not let frontend-dev build these as real content until the
-owner fills in the bracketed fields.
+**UPDATE — owner supplied the missing details below (2026-09-24).** Experience
+and Education are now real content, not placeholders. Remaining open item:
+the CV PDF file itself still needs to be supplied (see Contact/Download CV
+note below).
 
 ---
 
@@ -30,32 +27,40 @@ here — this page's on-page content is the resume itself.
 
 ## Experience
 
-> [PLACEHOLDER — owner to fill in: employer name(s), job title(s), employment
-> dates. The one fact I can confirm from source material is "5 years in
-> customer service," used elsewhere on the site (About, Home proof strip). I
-> don't have specifics to build a real entry from.]
+**Phone Interviewer** — Kantar
+2021 – Jan 2023
+- Conducted structured phone interviews for market research studies,
+  recording responses accurately and documenting each call precisely.
+- Habits that carry directly into IT support: following a defined process,
+  logging things clearly, staying accurate under time pressure.
 
-**Suggested entry format for frontend-dev, once owner supplies details:**
+**Retail Associate** — Barona (Prisma, S-Market)
+2018 – 2021
+- Customer service, checkout, sales, and shelving/stock picking in a
+  fast-paced retail environment.
+- Regularly resolved customer issues on the spot — the same listen-first,
+  solve-second approach that carries over into helpdesk work.
 
-**[Job Title]** — [Company Name], [City]
-[Start date] – [End date]
-- Handled [type of customer contact — phone/in-person/etc.] in a
-  [retail/service/etc.] environment, [X] years total.
-- Built habits directly relevant to IT support: staying calm under pressure,
-  listening before proposing a fix, explaining things in plain language to
-  people with no technical background.
+(Five years total customer service experience, referenced elsewhere on the
+site in About and the Home proof strip.)
 
 ---
 
 ## Education
 
 **Haaga-Helia University of Applied Sciences** — Helsinki
-[PLACEHOLDER — degree program name, start date, expected graduation]
+Bachelor of Business Administration (Tradenomi AMK), Information Technology
+2023 – 2026 (expected graduation spring 2026)
 
 - Coursework covering networks, operating systems, and security.
 - Independent hands-on lab portfolio built alongside studies (see Projects
   page) — Windows Server, Active Directory, DNS/DHCP, and file services, each
   documented with screenshots and a real troubleshooting case.
+
+**Suomen Liikemiesten Kauppaopisto** — Helsinki
+Vocational Qualification in Business and Administration (Liiketalouden
+perustutkinto)
+2015 – 2018
 
 ---
 
@@ -73,31 +78,22 @@ the live site. Build the skills list from the clean version only.**
 Windows Server 2022, Windows 11, VMware Workstation
 
 **Directory & Identity** (page copy)
-Active Directory Domain Services, Group Policy / GPO, Entra ID, Microsoft 365
-admin fundamentals
+Active Directory Domain Services, Group Policy / GPO
 
 **Networking** (page copy)
 DNS, DHCP, TCP/IP fundamentals, SMB & NTFS permissions
 
-**Service Management** (page copy)
-ITIL v4 fundamentals, ServiceNow fundamentals
-
 **Tools** (page copy)
-PowerShell, RSAT, Wireshark, Nmap, Git & GitHub
+PowerShell, RSAT, Git & GitHub
 
 ---
 
-**Sourcing notes (owner/reviewer only — do not build this into the page):**
-Items directly evidenced in the Helpdesk-Portfolio lab folders I reviewed:
-Windows Server 2022, Windows 11, VMware Workstation, Active Directory Domain
-Services, Group Policy/GPO, DNS, DHCP, SMB & NTFS permissions, PowerShell,
-RSAT. The remaining items — Entra ID, Microsoft 365 admin fundamentals,
-TCP/IP fundamentals, ITIL v4 fundamentals, ServiceNow fundamentals, Wireshark,
-Nmap, Git & GitHub — carry over unchanged from the current live site's Skills
-section; I could not verify them against the 4 lab write-ups (they're
-presumably from coursework, self-study, or other project work not represented
-in the Helpdesk-Portfolio repo). Owner should confirm these are still
-accurate before frontend-dev builds the page.
+**Update (2026-09-24):** Entra ID, Microsoft 365 admin fundamentals,
+Wireshark, and Nmap were removed — owner confirmed they're not evidenced in
+the lab work and shouldn't be listed. ITIL v4 / ServiceNow are intentionally
+left off for now (course not yet completed) — owner will add once finished,
+ideally naming the specific certification (e.g. "ITIL 4 Foundation") rather
+than generic "fundamentals" wording.
 
 ---
 
@@ -113,20 +109,10 @@ Carries over unchanged from the current site.
 
 ---
 
-## Summary of gaps for owner (repeated here for visibility)
+## Remaining open item for owner
 
-1. **Experience section** — no employer name(s), job title(s), or dates for
-   the 5 years of customer service work. Needed before this section can be
-   real content instead of a placeholder.
-2. **Education dates** — no Haaga-Helia enrollment or expected graduation date
-   found in source material.
-3. **ITIL v4 / ServiceNow** — unclear whether these are formal
-   certifications, completed coursework, or self-study. Wording on Home's
-   proof strip and here assumes "fundamentals" (i.e., familiarity, not a named
-   certification) — if there's an actual certificate (e.g. "ITIL 4
-   Foundation"), naming it specifically would read stronger to a recruiter.
-4. **Entra ID, M365 admin, Wireshark, Nmap** — carried over from the current
-   site's skills list but not evidenced in the 4 lab folders reviewed for this
-   project. Kept as-is; flagging in case they're stale or need updating.
-5. **CV file** — Download CV button needs an actual file path/PDF from the
-   owner; not produced as part of this content pass.
+1. **CV file** — Download CV button needs an actual file path/PDF from the
+   owner; not produced as part of this content pass. Everything else
+   (Experience, Education, Skills) is now resolved as of 2026-09-24.
+2. **ITIL v4 / ServiceNow** — intentionally deferred, not a gap: owner will
+   add once the course is completed.
