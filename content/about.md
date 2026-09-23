@@ -1,87 +1,53 @@
 # ABOUT (about.html) — Copy
 
-Source: current site's 4 About paragraphs (index.html on main), expanded. This
-is the one page allowed to be more personal/narrative — still restrained, not
-flashy, no filler words ("passionate," "leverage," etc.).
-
-Note for owner: I expanded each paragraph using only what's already
-established (the lab work, the customer-service background, the studies) —
-I did not invent specific employers, job titles, dates, or personal interests/
-hobbies, since none of that was in the source material I had access to. The
-new "day-to-day" paragraph (4th below) is grounded in the lab work and the
-customer-service framing rather than invented specifics. If there's a hobby,
-volunteer work, or other personal detail you want in the closing paragraph,
-that's an easy add — just say what it is.
+**Final version (2026-09-24):** the owner supplied a complete rewrite of the
+body copy, replacing all prior drafts below. This is now the source of truth
+for about.html.
 
 ---
 
 **Section label:** minusta
 
-**Translated to Finnish 2026-09-24** (owner request: site is Finnish-only for
-now). Paragraph structure/order unchanged from the humanizer-pass version
-below; only the language changed.
+### Body copy (Finnish, owner-authored final version)
 
-### Paragraph 1 — Background (Finnish page copy)
+Kiinnostukseni tekniikkaan ei oikeastaan alkanut koulussa. Perhe ja kaverit
+ovat soittaneet minulle jo vuosia silloin, kun tietokone ei käynnisty,
+tulostin ei toimi tai Windows kaipaa uudelleenasennusta. En ole koskaan
+tehnyt varsinaista päätöstä siitä, että minusta tulee IT-alan
+ammattilainen. Tekniikka on vain ollut mukana arjessani niin pitkään, että
+IT-alalle päätyminen tuntui lopulta luontevalta.
 
-Kiinnostukseni tekniikkaan ei syntynyt luokkahuoneessa. Perhe ja kaverit ovat
-soittaneet minulle jo lapsesta asti aina, kun tietokone ei käynnisty,
-tulostin ei toimi tai Windows pitää asentaa uudelleen. Ei ollut yhtä hetkeä,
-jolloin päätin ryhtyä IT-alalle. Se on vain aina ollut osa arkea, kauan ennen kuin siitä tuli
-urasuunnitelma.
+Haaga-Heliassa olen saanut käytännön tekemisen ympärille myös teoreettisen
+pohjan. Olen opiskellut muun muassa verkkoja, käyttöjärjestelmiä ja
+tietoturvaa. Opintojen rinnalla olen rakentanut omaa projektiportfoliotani
+Windows Serverin, Active Directoryn, DNS:n, DHCP:n ja tiedosto-oikeuksien
+parissa. Projekteissa olen halunnut päästä mahdollisimman lähelle oikeita
+tilanteita: olen rakentanut ympäristöjä, rikkonut niitä tarkoituksella ja
+selvittänyt, mistä ongelmat johtuvat. Dokumentoin projektit kuvakaappauksin
+ja vaiheittain, jotta tekemisestä jää muutakin kuin pelkkä lista
+teknologioista.
 
-### Paragraph 2 — Haaga-Helia studies (Finnish page copy)
+Viiden vuoden asiakaspalvelukokemus on opettanut minulle paljon myös siitä,
+mitä hyvä IT-tuki käytännössä tarkoittaa. Kaikkea ei tarvitse selittää
+teknisillä termeillä. Kun käyttäjän työ pysähtyy, tärkeintä on kuunnella,
+selvittää ongelma ja auttaa hänet mahdollisimman nopeasti eteenpäin.
+Oikeiden kysymysten esittäminen, asioiden selittäminen selkeästi ja
+rauhallisena pysyminen ovat taitoja, joita olen päässyt harjoittelemaan jo
+ennen IT-opintojani.
 
-Haaga-Heliassa olen opiskellut verkkoja, käyttöjärjestelmiä ja tietoturvaa
-jäsennellysti, mikä on täydentänyt sitä "miksi"-osaa, jonka olin jo oppinut
-kantapään kautta. Opintojen ohella olen rakentanut käytännön
-projektiportfolion (Windows Server, Active Directory, DNS/DHCP,
-tiedosto-oikeudet), ja jokainen niistä on dokumentoitu kuvakaappauksin ja
-aidolla vianselvitystapauksella. Halusin todisteita, joihin voin viitata, en
-pelkkää listaa kurssien nimistä.
+Ongelmanratkaisussa pidän käytännönläheisestä lähestymistavasta. Jos jokin
+ei toimi, en halua arvailla syytä, vaan selvittää sen. Labroissani olen
+esimerkiksi muuttanut DNS-asetuksia, lukinnut käyttäjätilejä ja poistanut
+ryhmäjäsenyyksiä nähdäkseni, miltä erilaiset ongelmat näyttävät ja miten ne
+voidaan ratkaista. Tavoitteena on aina sama: löytää todellinen syy, korjata
+ongelma ja varmistaa, että kaikki toimii ennen kuin asia on valmis.
 
-### Paragraph 3 — Customer service → support mindset (Finnish page copy)
+Tällä hetkellä etsin ensimmäistä työpaikkaani helpdesk- tai service desk
+-tehtävistä. Haluan päästä soveltamaan oppimaani oikeissa ympäristöissä,
+oppia kokeneemmilta ja kehittää osaamistani käytännön työn kautta.
+Pidemmällä aikavälillä tavoitteeni on rakentaa tästä itselleni pitkä ura
+IT-alalla.
 
-Viisi vuotta asiakaspalvelussa opetti, mitä IT-tuki oikeasti vaatii, ja se on
-vähemmän teknistä kuin moni luulee: kuuntele ensin, ratkaise sitten.
-Turhautunut käyttäjä ei halua luentoa DNS:stä, hän haluaa päästä takaisin
-töihin. Se tarkoittaa oikeiden kysymysten esittämistä ennen ratkaisuun
-hyppäämistä, tilanteen selittämistä selkokielellä ja rauhallisena pysymistä,
-vaikka toinen ei olisi. Nämä tavat siirtyvät suoraan mukanani: teknistä
-puolta voin yhä kehittää, mutta kärsivällisyys ja kuuntelemisen taito ovat jo
-olemassa.
-
-### Paragraph 4 — What IT support means day to day (Finnish page copy)
-
-Minulle IT-tuki tarkoittaa ennen kaikkea sitä, että auttaa jotakuta
-pääsemään takaisin töihin mahdollisimman nopeasti, ja rehellisyyttä siitä, mitä on
-meneillään, kun ongelmaa ei saa korjattua heti. Labratöissäni rikoin asioita
-tarkoituksella: väärän DNS-asetuksen, lukitun tilin, puuttuvan
-ryhmäjäsenyyden, jotta tietäisin miltä kukin vika näyttää ennen kuin näen sen
-oikealla tiketillä. Sitä tapaa haluan tuoda service deskille: älä arvaa,
-tarkista ensin yksinkertaisin selitys, korjaa varsinainen ongelma ja varmista,
-että se on korjattu ennen tiketin sulkemista.
-
-### Paragraph 5 — Current goal (Finnish page copy)
-
-Juuri nyt etsin ensimmäistä työpaikkaa helpdesk- tai service desk -tehtävistä,
-paikkaa jossa voin hyödyntää näitä taitoja oikeilla tiketeillä ja oppia
-niiltä, jotka ovat tehneet tätä minua pidempään. Pidemmällä aikavälillä
-haluan tämän kasvavan oikeaksi uraksi IT-alalla: tuki on paikka, josta
-haluan aloittaa, ei paikka johon aion jäädä.
-
----
-
-**Humanizer pass (2026-09-24):** removed 8 em dashes (site's original voice
-used none — just periods and colons) and 4 repeated uses of "actually" (a
-known overused AI filler word). Also trimmed a redundant "not just a list of
-X" repeated twice in paragraph 2 down to one. No facts, claims, or details
-changed. (This pass was on the English text; the Finnish translation above
-preserves the same no-dash, no-filler voice.)
-
-**Humanizer pass on Finnish text (2026-09-24):** fixed several literal-
-translation calques that read stiff in Finnish: a relative-clause
-construction ("olen ollut se, jolle...") replaced with a direct active
-sentence; a nominalized "sen palauttamista, että..." replaced with a plain
-"että"-clause; "yrityksen ja erehdyksen kautta" swapped for the more
-idiomatic "kantapään kautta"; and a stacked noun-phrase ending
-("kunnolliseksi IT-alan uraksi") simplified. No facts or claims changed.
+Tämä sivusto on koottu näyttämään, mitä olen tähän mennessä tehnyt ja
+oppinut. CV kertoo taustastani, mutta portfolio näyttää tekemisen
+käytännössä.
