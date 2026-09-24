@@ -4,8 +4,7 @@ Source: Helpdesk-Portfolio repo, 4 lab folders (01-Workstation-setup,
 02-Active-directory, 03-Network-troubleshooting, 04-FileServices). Original
 READMEs are in Finnish and screenshot-heavy; case studies below are written up
 in English from their actual content, not from the one-line descriptions
-currently on the live site. helpdesk-triage is intentionally excluded per
-owner decision.
+currently on the live site.
 
 Each case study has a short "ticket-style" metadata line (mono/UI-chrome
 styling, per design-lead) above the title, then three parts: the
