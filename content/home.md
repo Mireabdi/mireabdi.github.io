@@ -56,7 +56,7 @@ should read like a short fact, not a slogan. Laid out as flat info-panel rows
    rakennettu alusta asti ja dokumentoitu kuvakaappauksin sekä aidolla
    vianselvitystapauksella.
 2. **Tausta**: Viisi vuotta asiakaspalvelua on opettanut pysymään
-   rauhallisena, kuuntelemaan ensin ja korjaamaan varsinaisen ongelman — ei
+   rauhallisena, kuuntelemaan ensin ja korjaamaan varsinaisen ongelman, ei
    vain oiretta, jonka joku kuvailee.
 3. **Saatavuus**: Asuu Helsingissä ja on valmis aloittamaan heti.
 
