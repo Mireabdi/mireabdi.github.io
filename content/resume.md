@@ -32,18 +32,27 @@ here — this page's on-page content is the resume itself.
 
 **Puhelinhaastattelija** — Kantar
 2021 – tammikuu 2023
-- Toteutti strukturoituja puhelinhaastatteluja markkinatutkimuksiin, kirjasi
-  vastaukset tarkasti ja dokumentoi jokaisen puhelun huolellisesti.
-- Taitoja, jotka siirtyvät suoraan tikettien kirjaamiseen ja määritellyn
-  prosessin noudattamiseen aikapaineen alla.
+- Strukturoidut puhelinhaastattelut markkinatutkimuksiin
+- Vastausten tarkka kirjaaminen
+- Jokaisen puhelun huolellinen dokumentointi
+- Määritellyn prosessin noudattaminen aikapaineen alla
+
+Taidot siirtyvät suoraan IT-tukeen: tikettien kirjaamiseen ja prosessin
+mukaan toimimiseen.
 
 **Myyjä** — Barona (Prisma, S-Market)
 2018 – 2021
-- Asiakaspalvelua, kassatyötä, myyntiä sekä hyllytystä ja keräilyä
-  nopeatempoisessa vähittäiskauppaympäristössä.
-- Ratkoi asiakkaiden ongelmia säännöllisesti heti paikan päällä: sama
-  kuuntele ensin, ratkaise sitten -periaate, joka siirtyy suoraan
-  helpdesk-työhön.
+- Asiakaspalvelu
+- Kassatyö ja myynti
+- Hyllytys ja keräily
+- Asiakkaiden ongelmien ratkaiseminen heti paikan päällä
+
+Nopeatempoinen vähittäiskauppaympäristö. Sama kuuntele ensin, ratkaise
+sitten -periaate siirtyy suoraan IT-tukeen.
+
+(2026-09-24: owner asked for the tasks as a clean bullet list. Same facts,
+split into short bullets; the transferable-skill line follows each list,
+matching the Education entry's desc + content-list pattern on the page.)
 
 ---
 
@@ -74,6 +83,21 @@ Liiketalouden perustutkinto
 
 ---
 
+## Certifications (section label: "sertifikaatit ja kurssit")
+
+Added 2026-09-24 at owner request. Placed after Education, before Skills;
+same timeline-row layout as Education.
+
+**CCNA: Introduction to Networks**
+Cisco Networking Academy, Haaga-Helia ammattikorkeakoulu
+22.5.2025
+
+(Note: this is the first NetAcad course of the CCNA track, not the CCNA
+certification exam. Name kept exactly as the course is titled. Heading renamed to "sertifikaatit
+ja kurssit" so it isn't read as the full CCNA certification.)
+
+---
+
 ## Skills
 
 Carries over from the current site's Skills section, expanded/verified
@@ -85,7 +109,7 @@ those parenthetical tags are NOT page content and must never be rendered on
 the live site. Build the skills list from the clean version only.**
 
 **Alustat** (page copy)
-Windows Server 2022, Windows 11, VMware Workstation
+Windows Server 2022, Windows 11, Linux, VMware Workstation
 
 **Hakemisto ja identiteetti** (page copy)
 Active Directory Domain Services, Group Policy / GPO
@@ -94,7 +118,7 @@ Active Directory Domain Services, Group Policy / GPO
 DNS, DHCP, TCP/IP-perusteet, SMB- ja NTFS-oikeudet
 
 **Työkalut** (page copy)
-PowerShell, RSAT, Git & GitHub
+PowerShell, RSAT, Git & GitHub, Cisco Packet Tracer, Claude Code
 
 ---
 
@@ -104,6 +128,9 @@ the lab work and shouldn't be listed. ITIL v4 / ServiceNow are intentionally
 left off for now (course not yet completed) — owner will add once finished,
 ideally naming the specific certification (e.g. "ITIL 4 Foundation") rather
 than generic "fundamentals" wording.
+
+**Update (2026-09-24):** Linux (Alustat), Cisco Packet Tracer and Claude
+Code (Työkalut) added at owner request.
 
 ---
 
