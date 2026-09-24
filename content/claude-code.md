@@ -62,8 +62,25 @@ syyttää koodia. (Source: helpdesk-triage commits fixing TICKET-0005, -0011,
 Portfolioni uudistus yhden sivun versiosta monisivuiseksi sivustoksi,
 rakennettuna yhden tyylioppaan pohjalta.
 
-Työ jaettiin agent teams -toiminnolla: omat tiimiläiset sisällölle, ulkoasun
-toteutukselle ja tyylioppaalle, jokainen omassa worktreessaan.
+Työ jaettiin agent teams -toiminnolla. Jokaisella tiimiläisellä oli oma
+roolinsa, ja jokainen työskenteli omassa worktreessaan:
+
+- `task-lead` (tiiminvetäjä) koordinoi työtä, jakoi tehtävät muille ja teki
+  päätökset sivujen rakenteesta ja sisällöstä.
+- `design-lead` kirjoitti tyylioppaan: värit, typografian, komponentit ja
+  säännöt siitä, mitä sivustolla ei tehdä.
+- `content-dev` kirjoitti tekstit neljälle sivulle labrojen ja CV:n todellisen
+  sisällön pohjalta.
+- `frontend-dev` rakensi sivupohjan (navigaatio, alatunniste, teeman vaihto)
+  ja sivut tyylioppaan ja tekstiluonnosten mukaan.
+
+Jokaisen tiimiläisen työ tarkistettiin ja korjattiin ennen kuin se
+yhdistettiin sivuston pääversioon.
+
+(Sources: role names from content/*.md and docs/style-guide.md
+("per design-lead", "task-lead owns that", "FRONTEND-DEV"); worktree/branch
+names style-guide-doc, content-dev, frontend-dev; each branch has a
+"review findings/feedback" fix commit before its merge.)
 
 **Opittua:** Tyyliopas kirjoitettiin ja hyväksyttiin ennen kuin yhtään sivua
 rakennettiin. Juuri se piti usean agentin työn yhtenäisenä: kun jokin oli
