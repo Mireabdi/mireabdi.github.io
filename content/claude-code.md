@@ -14,15 +14,16 @@ tags, repo link. No status dot: these aren't support cases.
 ## Intro
 
 Claude Code on Anthropicin tekoälytyökalu, jonka kanssa voi rakentaa
-ohjelmistoja keskustelemalla. Se lukee ja kirjoittaa koodia ja ajaa komentoja
-suoraan omalla koneella. Aloin käyttää sitä uteliaisuudesta: halusin nähdä,
-kuinka pitkälle pääsen rakentamaan oikeita asioita ilman kehittäjätaustaa.
+ohjelmistoja keskustelemalla. Se lukee koodia, kirjoittaa sitä ja ajaa
+komentoja suoraan omalla koneellani. Aloin käyttää sitä uteliaisuudesta:
+halusin nähdä, kuinka pitkälle pääsen rakentamaan oikeita asioita ilman
+kehittäjätaustaa.
 
-Siitä tuli kuitenkin enemmän kuin kokeilu. Claude Code pakotti opettelemaan
-asiat kunnolla: Gitin, työskentelyn suunnitelman pohjalta improvisoinnin
-sijaan ja oman työn tarkistamisen ennen kuin sanon sen olevan valmis. En koe
-löytäneeni oikotietä. Tämä on tapa, jolla opettelen rakentamaan asioita
-oikein.
+Siitä tuli silti enemmän kuin kokeilu. Se pakotti minut opettelemaan asiat
+kunnolla: käyttämään Gitiä, etenemään suunnitelman mukaan improvisoinnin
+sijaan ja tarkistamaan oman työni ennen kuin sanon sen valmiiksi. En usko
+löytäneeni mitään oikotietä. Tämä on pikemminkin tapa, jolla opin
+rakentamaan asioita oikein.
 
 Tälle sivulle kokoan projekteja, joita olen tehnyt Claude Coden kanssa. Tämä
 on harrastuspuolta, erillään helpdesk-labroistani, joten jokaisen projektin
