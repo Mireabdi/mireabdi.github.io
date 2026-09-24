@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem("mireSite.theme");
+    var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+    document.write('<meta name="theme-color" content="' + (theme === "dark" ? "#15181d" : "#f1f2f4") + '">');
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code -projektit — Abdi Mire</title>
+<meta name="description" content="Harrastusprojekteja, jotka Abdi Mire on rakentanut Claude Coden kanssa: mitä tein, millä työtavalla ja mitä opin.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Claude Code -projektit — Abdi Mire">
+<meta property="og:description" content="Harrastusprojekteja, jotka Abdi Mire on rakentanut Claude Coden kanssa: mitä tein, millä työtavalla ja mitä opin.">
+<meta property="og:url" content="https://mireabdi.github.io/claude-code.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314171c'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='700' fill='%232f6f6b' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="assets/main.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="wrap">
+    <a class="logo" href="index.html">mire<span class="logo-at">@</span>it-support</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html">Etusivu</a></li>
+        <li><a href="projects.html">Projektit</a></li>
+        <li><a href="claude-code.html" aria-current="page">Claude Code</a></li>
+        <li><a href="about.html">Minusta</a></li>
+        <li><a href="resume.html">Ansioluettelo</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Vaihda tumma/vaalea tila">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+
+  <div class="page-intro">
+    <div class="wrap">
+      <p class="section-label" aria-hidden="true">mire@it-support:~/claude-code$</p>
+      <h1 class="page-heading">Claude Code -projektit</h1>
+      <div class="prose">
+        <p>Claude Code on Anthropicin tekoälytyökalu, jonka kanssa voi rakentaa ohjelmistoja keskustelemalla. Se lukee ja kirjoittaa koodia ja ajaa komentoja suoraan omalla koneella. Aloin käyttää sitä uteliaisuudesta: halusin nähdä, kuinka pitkälle pääsen rakentamaan oikeita asioita ilman kehittäjätaustaa.</p>
+        <p>Siitä tuli kuitenkin enemmän kuin kokeilu. Claude Code pakotti opettelemaan asiat kunnolla: Gitin, työskentelyn suunnitelman pohjalta improvisoinnin sijaan ja oman työn tarkistamisen ennen kuin sanon sen olevan valmis. En koe löytäneeni oikotietä. Tämä on tapa, jolla opettelen rakentamaan asioita oikein.</p>
+        <p>Tälle sivulle kokoan projekteja, joita olen tehnyt Claude Coden kanssa. Tämä on harrastuspuolta, erillään helpdesk-labroistani, joten jokaisen projektin kohdalla kerron myös, mitä opin.</p>
+      </div>
+    </div>
+  </div>
+
+  <article class="case-entry section">
+    <div class="wrap">
+      <p class="case-meta">Projekti 01 · Työtapa: suunnitelma ensin (superpowers) · Python</p>
+      <h2 class="case-title">Tikettien luokittelija</h2>
+      <div class="prose">
+        <p>Komentorivityökalu, joka luokittelee helpdesk-tiketin kategoriaan, arvioi sen kiireellisyyden ja hakee samankaltaiset aiemmat tiketit ratkaisuineen. Työkalu näyttää aina, mitkä sanat ja signaalit päätökseen vaikuttivat, eikä arvaa, jos se ei ole riittävän varma.</p>
+        <p>Rakensin sen superpowers-työnkululla: ensin suunnitteludokumentti, sitten toteutussuunnitelma, testit ennen koodia (TDD) ja lopuksi oma worktree ja pull request.</p>
+
+        <h3 class="section-label">opittua</h3>
+        <p>Kun testasin työkalua demodatalla, osa vääristä tuloksista ei johtunutkaan työkalusta vaan datasta: kolmen tiketin kiireellisyys oli merkitty väärin. Opin, että myös testidata pitää tarkistaa, ennen kuin syyttää koodia.</p>
+      </div>
+      <p class="row-tags"><span>Python</span><span>scikit-learn</span><span>pytest</span></p>
+      <a class="case-link" href="https://github.com/Mireabdi/helpdesk-triage" target="_blank" rel="noopener">Katso repo GitHubissa →</a>
+    </div>
+  </article>
+
+  <article class="case-entry section">
+    <div class="wrap">
+      <p class="case-meta">Projekti 02 · Työtapa: agent teams · HTML/CSS</p>
+      <h2 class="case-title">Tämä sivusto</h2>
+      <div class="prose">
+        <p>Portfolioni uudistus yhden sivun versiosta monisivuiseksi sivustoksi, rakennettuna yhden tyylioppaan pohjalta.</p>
+        <p>Työ jaettiin agent teams -toiminnolla: omat tiimiläiset sisällölle, ulkoasun toteutukselle ja tyylioppaalle, jokainen omassa worktreessaan.</p>
+
+        <h3 class="section-label">opittua</h3>
+        <p>Tyyliopas kirjoitettiin ja hyväksyttiin ennen kuin yhtään sivua rakennettiin. Juuri se piti usean agentin työn yhtenäisenä: kun jokin oli epäselvää, vastaus löytyi oppaasta eikä kenenkään arvauksesta.</p>
+      </div>
+      <p class="row-tags"><span>HTML</span><span>CSS</span><span>Git</span></p>
+      <a class="case-link" href="https://github.com/Mireabdi/mireabdi.github.io" target="_blank" rel="noopener">Katso repo GitHubissa →</a>
+    </div>
+  </article>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span id="copyright-year">© 2025 Abdi Mire</span>
+    <a href="https://github.com/Mireabdi/mireabdi.github.io" target="_blank" rel="noopener">Lähdekoodi GitHubissa</a>
+  </div>
+</footer>
+
+</body>
+</html>
